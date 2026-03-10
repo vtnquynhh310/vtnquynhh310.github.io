@@ -3,157 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vu Thi Nhu Quynh | Professional Portfolio</title>
+    <title>Vu Thi Nhu Quynh | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --main-pink: #ffd6e0; --main-blue: #d1eaed; --text-color: #4a4a4a; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--text-color); background-color: #fffafa; scroll-behavior: smooth; overflow-x: hidden; }
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            background: linear-gradient(135deg, #fdfcfb 0%, #e2d1f9 100%);
+            color: #6d6d6d;
+            scroll-behavior: smooth;
+        }
         .font-serif { font-family: 'Playfair Display', serif; }
         
-        /* Hiệu ứng Cánh hoa rơi */
-        .petal { position: absolute; background-color: #ffb7c5; border-radius: 150% 0 150% 0; animation: petal-fall linear infinite; z-index: 10; pointer-events: none; }
-        @keyframes petal-fall {
-            0% { transform: translate(0, -10vh) rotate(0deg); opacity: 1; }
-            100% { transform: translate(100px, 100vh) rotate(360deg); opacity: 0; }
+        /* Hiệu ứng lấp lánh nhẹ nhàng */
+        .sparkle {
+            position: absolute; background: white; border-radius: 50%;
+            pointer-events: none; animation: shine 2s infinite;
+        }
+        @keyframes shine {
+            0%, 100% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1); opacity: 0.8; }
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            border-radius: 30px;
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(255, 183, 197, 0.2); }
-
-        .image-frame {
+        .glass-soft {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.6);
             border-radius: 40px;
-            border: 6px solid #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.5s ease;
         }
-        .image-frame:hover { transform: scale(1.05) rotate(2deg); }
-        
-        .floating { animation: floating 4s ease-in-out infinite; }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+
+        .skill-tag {
+            background: white;
+            padding: 8px 20px;
+            border-radius: 100px;
+            box-shadow: 0 4px 15px rgba(226, 209, 249, 0.4);
+            transition: 0.3s;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+        .skill-tag:hover { transform: scale(1.1); background: #ffd6e0; color: white; }
+
+        .floating { animation: float 5s ease-in-out infinite; }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .heart-icon { color: #ffb7c5; animation: beat 1.5s infinite; }
+        @keyframes beat {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
         }
     </style>
 </head>
-<body class="pt-24">
+<body>
 
     <script>
-        function createPetal() {
-            const petal = document.createElement('div');
-            petal.classList.add('petal');
-            petal.style.left = Math.random() * 100 + 'vw';
-            petal.style.width = Math.random() * 15 + 10 + 'px';
-            petal.style.height = petal.style.width;
-            petal.style.animationDuration = Math.random() * 3 + 4 + 's';
-            petal.style.opacity = Math.random() * 0.7 + 0.3;
-            document.body.appendChild(petal);
-            setTimeout(() => { petal.remove(); }, 6000);
+        for (let i = 0; i < 30; i++) {
+            let s = document.createElement('div');
+            s.className = 'sparkle';
+            s.style.top = Math.random() * 100 + 'vh';
+            s.style.left = Math.random() * 100 + 'vw';
+            s.style.width = s.style.height = Math.random() * 5 + 'px';
+            s.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(s);
         }
-        setInterval(createPetal, 400);
     </script>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-5 flex justify-between items-center backdrop-blur-md bg-white/50 border-b border-white/20">
-        <span class="text-2xl font-extrabold tracking-tighter text-pink-500 italic">Quynh ✨</span>
-        <div class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
-            <a href="#about" class="hover:text-pink-400 transition">About</a>
-            <a href="#education" class="hover:text-pink-400 transition">Education</a>
-            <a href="#experience" class="hover:text-pink-400 transition">Exp</a>
-            <a href="#moments" class="hover:text-pink-400 transition">Moments</a>
+    <nav class="fixed w-full z-50 px-8 py-4 flex justify-between items-center bg-white/30 backdrop-blur-sm">
+        <span class="text-2xl font-bold text-purple-400 italic">Quynh.vn</span>
+        <div class="space-x-6 text-[11px] font-bold uppercase tracking-tighter">
+            <a href="#about" class="hover:text-pink-400">About</a>
+            <a href="#skills" class="hover:text-pink-400">Skills</a>
+            <a href="#education" class="hover:text-pink-400">Edu</a>
+            <a href="#moments" class="hover:text-pink-400">Moments</a>
         </div>
     </nav>
 
     <header class="min-h-screen flex items-center justify-center px-6">
-        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center text-center md:text-left relative">
-            <div class="order-2 md:order-1 relative z-20">
-                <span class="bg-white px-4 py-1.5 rounded-full text-[10px] uppercase tracking-widest text-pink-400 font-bold mb-4 inline-block shadow-sm">Sophomore • FTU • CFAA</span>
-                <h1 class="text-6xl md:text-8xl font-serif font-bold mb-6 text-gray-900 leading-tight">Vu Thi <span class="text-pink-300 italic">Nhu Quynh</span></h1>
-                <p class="text-lg text-gray-500 font-light max-w-xl mx-auto md:mx-0 leading-relaxed mb-12">
-                    Accounting & Auditing student at Foreign Trade University. Passionate about natural sciences, mathematics, and human resource management.
+        <div class="max-w-5xl grid md:grid-cols-2 gap-8 items-center">
+            <div class="text-center md:text-left">
+                <p class="text-pink-400 font-bold mb-4 flex items-center gap-2">
+                    <i class="fa-solid fa-heart heart-icon"></i> Hello, I'm Quynh
                 </p>
-                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
-                    <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="bg-pink-400 text-white px-8 py-3.5 rounded-full font-bold text-xs tracking-widest hover:scale-110 transition shadow-lg">Facebook</a>
-                    <a href="mailto:nhuquynhh3110@gmail.com" class="bg-white px-8 py-3.5 rounded-full font-bold text-xs tracking-widest text-pink-400 border border-pink-100 hover:shadow-xl transition">Email</a>
+                <h1 class="text-6xl md:text-8xl font-serif font-bold text-gray-800 mb-6 leading-tight">
+                    Pure & <span class="text-purple-300">Logical.</span>
+                </h1>
+                <p class="text-lg mb-10 leading-relaxed text-gray-400">
+                    A Libra from Hai Duong, currently a sophomore <span class="font-bold underline">major in</span> Accounting & Auditing at FTU.
+                </p>
+                <div class="flex gap-4 justify-center md:justify-start">
+                    <a href="mailto:nhuquynhh3110@gmail.com" class="bg-purple-300 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-pink-300 transition">Contact Me</a>
+                    <a href="#skills" class="bg-white px-8 py-3 rounded-full font-bold shadow-sm border border-purple-100 hover:shadow-md transition">My Skills</a>
                 </div>
             </div>
-            <div class="order-1 md:order-2 flex justify-center relative">
-                <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-full shadow-2xl border-[15px] border-white floating relative z-10">
-                <div class="absolute -top-10 -left-10 text-9xl opacity-10 floating">🌸</div>
+            <div class="flex justify-center relative">
+                <div class="w-72 h-72 md:w-96 md:h-96 rounded-full border-8 border-white shadow-2xl overflow-hidden floating">
+                    <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-5 -right-5 bg-white p-4 rounded-2xl shadow-xl text-xs font-bold italic rotate-12">
+                    Libra ✨ 2006
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="education" class="py-24 px-6 bg-white rounded-[50px] shadow-inner">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-serif font-black mb-16 italic text-center text-pink-400">Education Journey</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="glass-card p-10 flex flex-col items-center text-center">
-                    <div class="grid grid-cols-2 gap-3 mb-6">
-                        <img src="https://lh3.googleusercontent.com/d/1w4xCcJ3T0u8LmM_sPfCgaucmUVDc8PMb" class="w-full h-32 object-cover rounded-3xl">
-                        <img src="https://lh3.googleusercontent.com/d/1n-0JeAU1ma6p3kjiJ49CKKRTB7O7zthP" class="w-full h-32 object-cover rounded-3xl">
-                    </div>
-                    <h4 class="text-2xl font-bold mb-1">Foreign Trade University</h4>
-                    <p class="text-pink-400 font-bold text-xs mb-3 italic">Sophomore | 2024 - Present</p>
-                    <p class="text-gray-500 font-medium">Major in <span class="font-semibold text-gray-800">Accounting & Auditing</span>.</p>
-                </div>
-                <div class="glass-card p-10 flex flex-col items-center text-center">
-                    <img src="https://lh3.googleusercontent.com/d/1C3NHOnVrR9c-4rR9-e3Z61BGvA94PAgE" class="w-full h-32 object-cover rounded-3xl mb-6">
-                    <h4 class="text-2xl font-bold mb-1">Kim Thanh High School</h4>
-                    <p class="text-blue-300 font-bold text-xs mb-3 italic">Alumni | Hai Duong</p>
-                    <p class="text-gray-500 font-medium">Strong academic background in <span class="font-semibold text-gray-800">Mathematics & Natural Sciences</span>.</p>
-                </div>
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-serif font-bold mb-12">My Little Strengths 🎀</h2>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="skill-tag">Microsoft Excel</span>
+                <span class="skill-tag">Team Leadership</span>
+                <span class="skill-tag">HR Management</span>
+                <span class="skill-tag">Logical Thinking</span>
+                <span class="skill-tag">English Communication</span>
+                <span class="skill-tag">Public Speaking</span>
+                <span class="skill-tag">Problem Solving</span>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 px-6 max-w-5xl mx-auto">
-        <h2 class="text-center text-xs font-bold uppercase tracking-[0.5em] mb-16 text-gray-400">Work & Leadership</h2>
-        <div class="space-y-6">
-            <div class="glass-card p-10 flex flex-col md:flex-row items-center gap-8 group">
-                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-28 h-28 object-cover rounded-full shadow-lg border-4 border-white transition-transform duration-500 group-hover:scale-110">
+    <section id="education" class="py-20 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10">
+            <div class="glass-soft p-10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-purple-100 rounded-bl-full opacity-50 transition-all group-hover:scale-150"></div>
+                <div class="flex gap-2 mb-6">
+                    <img src="https://lh3.googleusercontent.com/d/1w4xCcJ3T0u8LmM_sPfCgaucmUVDc8PMb" class="w-1/2 h-24 object-cover rounded-2xl">
+                    <img src="https://lh3.googleusercontent.com/d/1n-0JeAU1ma6p3kjiJ49CKKRTB7O7zthP" class="w-1/2 h-24 object-cover rounded-2xl">
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800">Foreign Trade University</h3>
+                <p class="text-purple-400 font-bold text-xs mb-4">2024 - Present</p>
+                <p class="text-sm">Sophomore, <span class="font-bold">major in</span> Accounting & Auditing.</p>
+            </div>
+
+            <div class="glass-soft p-10 relative overflow-hidden group">
+                <div class="absolute top-0 right-0 w-20 h-20 bg-pink-100 rounded-bl-full opacity-50 transition-all group-hover:scale-150"></div>
+                <img src="https://lh3.googleusercontent.com/d/1C3NHOnVrR9c-4rR9-e3Z61BGvA94PAgE" class="w-full h-24 object-cover rounded-2xl mb-6">
+                <h3 class="text-2xl font-bold text-gray-800">Kim Thanh High School</h3>
+                <p class="text-pink-400 font-bold text-xs mb-4">Alumni</p>
+                <p class="text-sm">Strong academic background in Mathematics.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
+        <div class="space-y-8">
+            <div class="glass-soft p-8 flex flex-col md:flex-row items-center gap-8 hover:bg-white/60 transition">
+                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-32 h-32 rounded-3xl object-cover border-4 border-white shadow-lg">
                 <div class="flex-1 text-center md:text-left">
-                    <h4 class="text-2xl font-bold">Vice Head of HR</h4>
-                    <p class="text-pink-400 font-semibold italic text-sm">CFAA - FTU (Future Accountants & Auditors Club)</p>
+                    <h4 class="text-2xl font-bold">Vice Head of Human Resources</h4>
+                    <p class="text-purple-400 font-bold text-sm italic mb-2">CFAA - FTU</p>
+                    <p class="text-xs text-gray-400">Managing club members and fostering a collaborative environment.</p>
                 </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-pink-300 bg-pink-50 px-4 py-1.5 rounded-lg">Since Nov 2025</span>
             </div>
-            <div class="glass-card p-10 flex flex-col md:flex-row items-center justify-between gap-8">
-                <div class="text-center md:text-left">
+            <div class="glass-soft p-8 flex flex-col md:flex-row items-center gap-8 hover:bg-white/60 transition">
+                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="w-32 h-32 rounded-3xl object-cover border-4 border-white shadow-lg">
+                <div class="flex-1 text-center md:text-left">
                     <h4 class="text-2xl font-bold">Mathematics Tutor</h4>
-                    <p class="text-gray-500 font-medium italic text-sm">Freelance Education</p>
+                    <p class="text-pink-400 font-bold text-sm italic mb-2">Freelance Education</p>
+                    <p class="text-xs text-gray-400">Simplifying complex numbers for high school students.</p>
                 </div>
-                <span class="text-[10px] font-bold uppercase tracking-widest text-gray-400 bg-gray-50 px-4 py-1.5 rounded-lg">Since Sep 2024</span>
             </div>
         </div>
     </section>
 
-    <section id="moments" class="py-24 px-6 bg-pink-50/50 rounded-[50px] shadow-inner">
-        <div class="max-w-6xl mx-auto">
-            <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-pink-400">Moments ✨</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="w-full h-64 object-cover image-frame">
-                <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="w-full h-64 object-cover image-frame">
-                <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="w-full h-64 object-cover image-frame">
-                <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="w-full h-64 object-cover image-frame">
-            </div>
+    <section id="moments" class="py-20 px-6 text-center">
+        <h2 class="text-3xl font-serif font-bold mb-12 italic text-purple-300">Soft Moments ✨</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4">
+            <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="h-64 w-full object-cover rounded-[30px] border-4 border-white shadow-sm hover:rotate-2 transition">
+            <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="h-64 w-full object-cover rounded-[30px] border-4 border-white shadow-sm hover:-rotate-2 transition">
+            <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="h-64 w-full object-cover rounded-[30px] border-4 border-white shadow-sm hover:rotate-2 transition">
+            <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="h-64 w-full object-cover rounded-[30px] border-4 border-white shadow-sm hover:-rotate-2 transition">
         </div>
     </section>
 
-    <footer id="contact" class="py-32 px-6 text-center rounded-t-[50px] bg-white mt-10 shadow-inner">
-        <h2 class="text-6xl font-serif font-bold italic mb-12 text-gray-900 leading-tight">Let's connect.</h2>
-        <div class="flex justify-center gap-8 md:gap-16 flex-wrap">
-            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="text-xs font-bold uppercase tracking-[0.3em] bg-pink-400 text-white px-10 py-4 rounded-full hover:scale-110 transition shadow-lg">Facebook</a>
-            <a href="mailto:nhuquynhh3110@gmail.com" class="text-xs font-bold uppercase tracking-[0.3em] text-pink-400 border border-pink-100 bg-white px-10 py-4 rounded-full hover:shadow-xl transition">vtnquynhh310@gmail.com</a>
+    <footer id="contact" class="py-20 text-center">
+        <p class="font-serif italic text-2xl mb-8">Reach out to me!</p>
+        <div class="flex justify-center gap-10">
+            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="text-purple-400 hover:text-pink-400 text-2xl transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="mailto:nhuquynhh3110@gmail.com" class="text-purple-400 hover:text-pink-400 text-2xl transition"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p class="mt-20 text-[10px] opacity-30 tracking-[0.5em] text-gray-400">© 2026 VU THI NHU QUYNH • Made with Love</p>
+        <p class="mt-12 text-[10px] tracking-widest uppercase opacity-40">© 2026 Vu Thi Nhu Quynh • Made with ✨</p>
     </footer>
 
 </body>
