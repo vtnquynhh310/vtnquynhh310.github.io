@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vũ Thị Như Quỳnh | Portfolio</title>
+    <title>Vu Thi Nhu Quynh | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -11,164 +11,189 @@
         body { font-family: 'Quicksand', sans-serif; background: #fdfcfb; color: #4a4a4a; scroll-behavior: smooth; }
         .font-serif { font-family: 'Playfair Display', serif; }
         
-        .text-primary { color: #ff2d75; }
-        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 30px; }
+        .text-pink-vibrant { color: #ff2d75; }
+        .bg-pink-vibrant { background-color: #ff2d75; }
+        
+        /* Glassmorphism Effect */
+        .glass { 
+            background: rgba(255, 255, 255, 0.7); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.5); 
+            border-radius: 30px; 
+        }
 
-        /* Custom Skill Bar đúng như ảnh mẫu */
-        .skill-container { width: 100%; background: #f0f0f0; border-radius: 100px; height: 10px; overflow: hidden; margin-top: 6px; }
+        /* Gradient Skill Bar đúng như ảnh mẫu */
+        .skill-container { width: 100%; background: #f2f2f2; border-radius: 100px; height: 10px; overflow: hidden; margin-top: 8px; }
         .skill-fill { 
-            background: linear-gradient(90deg, #7ee081 0%, #eb9fc0 100%); 
+            background: linear-gradient(90deg, #a8e6cf 0%, #ff85a2 100%); 
             height: 100%; 
             border-radius: 100px; 
         }
 
         .floating { animation: float 5s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+
+        .img-card { border: 8px solid white; box-shadow: 0 10px 30px rgba(0,0,0,0.05); }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 px-8 py-4 flex justify-between items-center bg-white/40 backdrop-blur-md">
-        <span class="text-2xl font-black text-[#ff85a2] italic">Như Quỳnh.vn</span>
-        <div class="hidden md:flex space-x-6 text-[11px] font-extrabold uppercase tracking-widest text-gray-500">
-            <a href="#intro" class="hover:text-[#ff85a2]">Introduction</a>
-            <a href="#edu" class="hover:text-[#ff85a2]">Education</a>
-            <a href="#skills" class="hover:text-[#ff85a2]">Skills</a>
-            <a href="#exp" class="hover:text-[#ff85a2]">Experience</a>
+    <nav class="fixed w-full z-50 px-8 py-5 flex justify-between items-center bg-white/30 backdrop-blur-md">
+        <span class="text-2xl font-black text-pink-vibrant italic">Quynh.</span>
+        <div class="hidden md:flex space-x-8 text-[11px] font-bold uppercase tracking-widest text-gray-400">
+            <a href="#intro" class="hover:text-pink-vibrant transition">Introduction</a>
+            <a href="#skills" class="hover:text-pink-vibrant transition">Skills</a>
+            <a href="#edu" class="hover:text-pink-vibrant transition">Education</a>
+            <a href="#exp" class="hover:text-pink-vibrant transition">Experience</a>
+            <a href="#moments" class="hover:text-pink-vibrant transition">Moments</a>
         </div>
     </nav>
 
-    <header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-20">
-        <div class="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-center md:text-left">
-                <h1 class="text-5xl md:text-7xl font-serif font-black text-gray-800 leading-tight mb-6">
-                    VŨ THỊ <br> <span class="text-[#ff85a2]">NHƯ QUỲNH</span>
+    <header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-24">
+        <div class="max-w-6xl grid md:grid-cols-2 gap-16 items-center">
+            <div class="order-2 md:order-1">
+                <h1 class="text-5xl md:text-8xl font-serif font-black text-gray-800 leading-[0.9] mb-8">
+                    VU THI <br> <span class="text-pink-vibrant uppercase">NHU QUYNH</span>
                 </h1>
-                <div class="glass p-8 mb-8 border-l-8 border-[#ff85a2]">
-                    <h3 class="text-xl font-bold mb-3 italic">Heluuu Introduction! ✨</h3>
-                    <p class="leading-loose text-gray-500">
-                        Mình là một cô gái đến từ <b>Hải Dương</b>, hiện đang là sinh viên năm 2 tại Ngoại thương. 
-                        Là một Libra chính hiệu, mình luôn đi tìm sự cân bằng giữa tính kỷ luật của những con số và sự năng động, nhiệt huyết trong công việc cộng đồng.
+                <div class="glass p-10 mb-8 border-l-8 border-pink-vibrant shadow-sm">
+                    <h3 class="text-xl font-bold mb-4 italic text-gray-700 underline decoration-pink-200 decoration-4">Introduction ✨</h3>
+                    <p class="leading-relaxed text-gray-500 font-medium mb-4">
+                        Hello! I am a sophomore student from <b>Hai Duong</b>, currently studying at <b>Foreign Trade University (FTU)</b>. 
+                    </p>
+                    <p class="leading-relaxed text-gray-500 font-medium">
+                        With a personality that blends youthful energy and professional discipline, I am always seeking ways to bridge the gap between logical thinking and creative management. 
                     </p>
                 </div>
-                <p class="text-lg italic text-gray-400">"Đam mê toán học, yêu những vẻ đẹp logic và luôn nỗ lực vì một phiên bản tốt hơn mỗi ngày."</p>
+                <div class="flex gap-4">
+                    <a href="#contact" class="bg-pink-vibrant text-white px-8 py-4 rounded-full font-bold shadow-lg hover:brightness-110 transition">Connect Me</a>
+                    <a href="#moments" class="bg-white text-pink-vibrant px-8 py-4 rounded-full font-bold shadow-sm border border-pink-100 hover:shadow-md transition">My Life</a>
+                </div>
             </div>
-            <div class="flex justify-center relative">
-                <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-[50px] shadow-2xl border-[15px] border-white floating">
+            <div class="order-1 md:order-2 flex justify-center">
+                <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-[60px] img-card floating">
             </div>
         </div>
     </header>
 
-    <section id="skills" class="py-20 px-6">
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-serif font-black text-pink-vibrant mb-8 italic uppercase">Passionate About</h2>
+        <div class="glass p-12 bg-pink-50/30 border-dashed border-2 border-pink-200">
+            <p class="text-xl italic text-gray-500 leading-loose">
+                "I have a profound passion for <b>Natural Sciences</b>, especially <b>Mathematics</b>. To me, every formula is a story of logic, and every complex problem is a challenge that inspires me to keep growing."
+            </p>
+        </div>
+    </section>
+
+    <section id="skills" class="py-24 px-6">
         <div class="max-w-4xl mx-auto">
-            <div class="flex items-center gap-2 mb-8">
-                <span class="text-2xl">🌿</span>
-                <h2 class="text-3xl font-bold text-gray-800">Skills</h2>
+            <div class="flex items-center gap-3 mb-12">
+                <span class="text-3xl">🌿</span>
+                <h2 class="text-4xl font-serif font-bold text-gray-800">Skills</h2>
             </div>
-            <div class="glass p-10 shadow-sm">
-                <div class="space-y-8">
+            <div class="glass p-12 shadow-sm bg-white/50">
+                <div class="space-y-10">
                     <div>
-                        <p class="text-sm font-semibold text-gray-600 ml-1">Mathematics & Logic</p>
-                        <div class="skill-container"><div class="skill-fill" style="width: 92%"></div></div>
+                        <p class="text-sm font-bold text-gray-600 tracking-wide">Logical Thinking & Math</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 95%"></div></div>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-gray-600 ml-1">English</p>
-                        <div class="skill-container"><div class="skill-fill" style="width: 85%"></div></div>
+                        <p class="text-sm font-bold text-gray-600 tracking-wide">English Communication</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 82%"></div></div>
                     </div>
                     <div>
-                        <p class="text-sm font-semibold text-gray-600 ml-1">Chinese</p>
-                        <div class="skill-container"><div class="skill-fill" style="width: 70%"></div></div>
-                    </div>
-                    <div>
-                        <p class="text-sm font-semibold text-gray-600 ml-1">Leadership</p>
+                        <p class="text-sm font-bold text-gray-600 tracking-wide">Human Resource Management</p>
                         <div class="skill-container"><div class="skill-fill" style="width: 88%"></div></div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="edu" class="py-20 px-6 bg-white/50">
-        <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Education</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="glass p-10 hover:shadow-xl transition duration-500 group">
-                    <div class="flex gap-2 mb-6">
-                        <img src="https://lh3.googleusercontent.com/d/1w4xCcJ3T0u8LmM_sPfCgaucmUVDc8PMb" class="w-1/2 h-24 object-cover rounded-2xl">
-                        <img src="https://lh3.googleusercontent.com/d/1n-0JeAU1ma6p3kjiJ49CKKRTB7O7zthP" class="w-1/2 h-24 object-cover rounded-2xl">
+                    <div>
+                        <p class="text-sm font-bold text-gray-600 tracking-wide">Microsoft Excel</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 78%"></div></div>
                     </div>
-                    <h4 class="text-2xl font-bold mb-2 group-hover:text-[#ff85a2]">Đại học Ngoại thương</h4>
-                    <p class="text-gray-400 font-bold text-xs mb-4">2024 - Hiện tại</p>
-                    <p class="text-gray-500 italic">Sinh viên năm 2 - Chuyên ngành tiêu chuẩn Kế toán – Kiểm toán.</p>
-                </div>
-                <div class="glass p-10 hover:shadow-xl transition duration-500 group">
-                    <img src="https://lh3.googleusercontent.com/d/1C3NHOnVrR9c-4rR9-e3Z61BGvA94PAgE" class="w-full h-24 object-cover rounded-2xl mb-6">
-                    <h4 class="text-2xl font-bold mb-2 group-hover:text-[#ff85a2]">THPT Kim Thành</h4>
-                    <p class="text-gray-400 font-bold text-xs mb-4">Cựu học sinh</p>
-                    <p class="text-gray-500 italic">Nơi bắt nguồn cho đam mê tự nhiên và những con số.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="exp" class="py-20 px-6 max-w-5xl mx-auto">
-        <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Experience</h2>
-        <div class="space-y-8">
-            <div class="glass p-8 flex flex-col md:flex-row items-center gap-8">
-                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-32 h-32 rounded-3xl object-cover shadow-lg border-4 border-white">
+    <section id="edu" class="py-24 px-6 bg-white/40">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-pink-vibrant uppercase">Education</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="glass p-10 hover:shadow-2xl transition-all group border-b-8 border-pink-vibrant">
+                    <div class="flex gap-2 mb-8">
+                        <img src="https://lh3.googleusercontent.com/d/1w4xCcJ3T0u8LmM_sPfCgaucmUVDc8PMb" class="w-1/2 h-28 object-cover rounded-3xl">
+                        <img src="https://lh3.googleusercontent.com/d/1n-0JeAU1ma6p3kjiJ49CKKRTB7O7zthP" class="w-1/2 h-28 object-cover rounded-3xl">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-pink-vibrant">Foreign Trade University</h4>
+                    <p class="text-pink-300 font-bold text-xs mb-6 uppercase tracking-widest">2024 - Present</p>
+                    <p class="text-gray-500 font-medium italic">Sophomore - Major in Accounting & Auditing (Standard Program).</p>
+                </div>
+                <div class="glass p-10 hover:shadow-2xl transition-all group border-b-8 border-green-200">
+                    <img src="https://lh3.googleusercontent.com/d/1C3NHOnVrR9c-4rR9-e3Z61BGvA94PAgE" class="w-full h-28 object-cover rounded-3xl mb-8">
+                    <h4 class="text-2xl font-bold mb-2 text-gray-800 group-hover:text-green-400">Kim Thanh High School</h4>
+                    <p class="text-green-200 font-bold text-xs mb-6 uppercase tracking-widest">Alumni</p>
+                    <p class="text-gray-500 font-medium italic">Where my mathematical foundation and dreams began.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="exp" class="py-24 px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-pink-vibrant uppercase">Experience</h2>
+        <div class="space-y-10">
+            <div class="glass p-10 flex flex-col md:flex-row items-center gap-10 hover:bg-white transition-colors shadow-sm">
+                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-40 h-40 rounded-[40px] object-cover img-card">
                 <div>
-                    <h4 class="text-2xl font-bold">Phó Ban Nhân sự - CFAA</h4>
-                    <p class="text-[#ff85a2] font-bold text-sm mb-3">CLB Kế toán - Kiểm toán viên tương lai (11/2025 – Nay)</p>
-                    <p class="text-gray-500">Quản lý và kết nối con người - một hành trình thú vị tại FTU.</p>
+                    <h4 class="text-2xl font-bold text-gray-800">Vice Head of Human Resources</h4>
+                    <p class="text-pink-vibrant font-bold text-sm mb-4">CFAA - FTU Future Accountants & Auditors Club (11/2025 – Present)</p>
+                    <p class="text-gray-500 font-medium leading-loose">Leading HR strategies, organizing internal activities, and maintaining a professional environment for club members.</p>
                 </div>
             </div>
-            <div class="glass p-8 flex flex-col md:flex-row items-center gap-8">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=500" class="w-32 h-32 rounded-3xl object-cover shadow-lg border-4 border-white">
+            <div class="glass p-10 flex flex-col md:flex-row items-center gap-10 hover:bg-white transition-colors shadow-sm">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=500" class="w-40 h-40 rounded-[40px] object-cover img-card">
                 <div>
-                    <h4 class="text-2xl font-bold">Gia sư môn Toán</h4>
-                    <p class="text-[#ff85a2] font-bold text-sm mb-3">Freelance (09/2024 – Nay)</p>
-                    <p class="text-gray-500">Giúp các em học sinh yêu thêm những con số logic.</p>
+                    <h4 class="text-2xl font-bold text-gray-800">Mathematics Tutor</h4>
+                    <p class="text-pink-vibrant font-bold text-sm mb-4">Freelance Education (09/2024 – Present)</p>
+                    <p class="text-gray-500 font-medium leading-loose">Inspiring students through numbers and helping them conquer academic challenges with a logical approach.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-serif font-bold text-[#ff85a2] mb-8 italic">My Hobby ❤️</h2>
-        <div class="glass p-10 italic text-lg text-gray-500">
-            "Mình cực kỳ thích học các môn tự nhiên, đặc biệt là môn Toán. Cảm giác chinh phục được một bài toán khó với mình giống như tìm thấy một mảnh ghép hoàn hảo vậy!"
+    <section id="hobby" class="py-24 px-6 text-center">
+        <h2 class="text-3xl font-serif font-bold text-pink-vibrant mb-12 italic uppercase">Hobby ❤️</h2>
+        <div class="max-w-3xl mx-auto glass p-12 italic text-lg text-gray-500 leading-relaxed font-medium">
+            "I genuinely enjoy studying natural sciences, especially Math. Solving a difficult equation brings me a sense of satisfaction that nothing else can match!"
         </div>
     </section>
 
-    <section id="moments" class="py-20 px-6">
-        <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Moments ✨</h2>
-        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
-            <div class="space-y-3">
-                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:rotate-2 transition">
-                <p class="text-xs text-center font-bold italic">Nắng sân trường FTU</p>
+    <section id="moments" class="py-24 px-6">
+        <h2 class="text-4xl font-serif font-black text-center mb-20 italic text-pink-vibrant uppercase">Moments ✨</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center group">
+                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="h-80 w-full object-cover rounded-[50px] img-card group-hover:rotate-2 transition duration-500 mb-4">
+                <p class="text-xs font-bold text-gray-400 italic">Sweetness at FTU</p>
             </div>
-            <div class="space-y-3 mt-10">
-                <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:-rotate-2 transition">
-                <p class="text-xs text-center font-bold italic">Cùng team CFAA</p>
+            <div class="text-center group md:mt-12">
+                <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="h-80 w-full object-cover rounded-[50px] img-card group-hover:-rotate-2 transition duration-500 mb-4">
+                <p class="text-xs font-bold text-gray-400 italic">With my CFAA Team</p>
             </div>
-            <div class="space-y-3">
-                <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:rotate-2 transition">
-                <p class="text-xs text-center font-bold italic">Góc nhỏ yêu thương</p>
+            <div class="text-center group">
+                <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="h-80 w-full object-cover rounded-[50px] img-card group-hover:rotate-2 transition duration-500 mb-4">
+                <p class="text-xs font-bold text-gray-400 italic">Peaceful Corner</p>
             </div>
-            <div class="space-y-3 mt-10">
-                <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:-rotate-2 transition">
-                <p class="text-xs text-center font-bold italic">Hải Dương bình yên</p>
+            <div class="text-center group md:mt-12">
+                <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="h-80 w-full object-cover rounded-[50px] img-card group-hover:-rotate-2 transition duration-500 mb-4">
+                <p class="text-xs font-bold text-gray-400 italic">Hello from Hai Duong</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-32 text-center bg-white rounded-t-[80px]">
-        <h2 class="text-5xl font-serif font-bold italic mb-12">Contact Me</h2>
-        <div class="flex justify-center gap-10">
-            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="text-[#ff85a2] text-4xl hover:scale-125 transition"><i class="fa-brands fa-facebook"></i></a>
-            <a href="mailto:nhuquynhh3110@gmail.com" class="text-[#ff85a2] text-4xl hover:scale-125 transition"><i class="fa-solid fa-envelope"></i></a>
+    <footer id="contact" class="py-40 text-center bg-white rounded-t-[120px] shadow-inner">
+        <h2 class="text-6xl font-serif font-black italic mb-16 text-gray-800">Stay Connected</h2>
+        <div class="flex justify-center gap-16">
+            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="text-pink-vibrant text-5xl hover:scale-125 transition-all duration-300"><i class="fa-brands fa-facebook"></i></a>
+            <a href="mailto:nhuquynhh3110@gmail.com" class="text-pink-vibrant text-5xl hover:scale-125 transition-all duration-300"><i class="fa-solid fa-envelope"></i></a>
         </div>
-        <p class="mt-20 text-[10px] font-black uppercase tracking-[1em] opacity-30">© 2026 VŨ THỊ NHƯ QUỲNH</p>
+        <p class="mt-24 text-[11px] font-black uppercase tracking-[1em] opacity-30">© 2026 VU THI NHU QUYNH</p>
     </footer>
 
 </body>
