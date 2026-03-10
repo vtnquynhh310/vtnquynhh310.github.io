@@ -3,122 +3,118 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thế giới của Như Quỳnh ✨</title>
+    <title>Thế giới màu hồng của Như Quỳnh 🎀</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Quicksand', sans-serif; scroll-behavior: smooth; }
-        .pink-gradient { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
-        .card-hover:hover { transform: translateY(-10px) rotate(2deg); transition: all 0.3s ease; }
-        .floating { animation: floating 3s ease-in-out infinite; }
-        @keyframes floating {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-15px); }
-            100% { transform: translateY(0px); }
+        body { font-family: 'Quicksand', sans-serif; background-color: #fff0f3; overflow-x: hidden; }
+        .font-cute { font-family: 'Dancing Script', cursive; }
+        .glass-card { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 2px solid #ffb7c5; }
+        
+        /* Hiệu ứng trái tim rơi */
+        .heart { position: fixed; color: #ff85a1; font-size: 20px; animation: fall linear infinite; z-index: 999; pointer-events: none; }
+        @keyframes fall {
+            0% { transform: translateY(-10vh) translateX(0); opacity: 1; }
+            100% { transform: translateY(100vh) translateX(100px); opacity: 0; }
+        }
+
+        .avatar-border { border: 8px double #ff85a1; animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 133, 161, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 133, 161, 0); }
+            100% { transform: scale(1); }
         }
     </style>
 </head>
-<body class="bg-[#fff5f7] text-gray-800">
+<body>
 
-    <nav class="fixed w-full bg-white/70 backdrop-blur-md z-50 border-b border-pink-100">
-        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-2xl font-bold text-pink-500 italic">Quynh ✨</span>
-            <div class="hidden md:flex space-x-6 text-pink-600 font-semibold">
-                <a href="#about" class="hover:text-pink-400">Về mình</a>
-                <a href="#hobbies" class="hover:text-pink-400">Sở thích</a>
-                <a href="#moments" class="hover:text-pink-400">Khoảnh khắc</a>
-                <a href="#contact" class="hover:text-pink-400">Chat nè</a>
-            </div>
+    <script>
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerHTML = '❤️';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heart.style.opacity = Math.random();
+            document.body.appendChild(heart);
+            setTimeout(() => { heart.remove(); }, 5000);
+        }
+        setInterval(createHeart, 400);
+    </script>
+
+    <header class="h-screen flex flex-col items-center justify-center text-center px-4">
+        <div class="relative mb-8">
+            <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Quynh&backgroundColor=ffdfbf" 
+                 class="w-40 h-40 rounded-full bg-white avatar-border object-cover" alt="Như Quỳnh">
+            <span class="absolute bottom-2 right-2 text-4xl">👑</span>
         </div>
-    </nav>
-
-    <section id="about" class="pt-32 pb-20 px-6 pink-gradient text-white rounded-b-[50px] shadow-lg">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="floating inline-block bg-white p-2 rounded-full shadow-2xl mb-8">
-                <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Quynh" alt="Avatar" class="w-32 h-32 rounded-full border-4 border-pink-200">
-            </div>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">Chào cậu, mình là <span class="text-pink-100">Như Quỳnh</span> 🎀</h1>
-            <p class="text-xl opacity-90 font-medium italic">"Luôn mỉm cười và tận hưởng cuộc sống theo cách riêng của mình!"</p>
+        <h1 class="text-5xl md:text-7xl font-cute text-[#ff4d6d] mb-4">Như Quỳnh nè! ✨</h1>
+        <p class="text-lg text-[#ff758f] font-semibold tracking-widest uppercase italic">"Yêu màu hồng, ghét sự giả dối, thích ăn ngon!"</p>
+        <div class="mt-8 flex gap-4">
+            <a href="#about" class="bg-[#ff85a1] text-white px-8 py-3 rounded-full shadow-lg hover:bg-[#ff4d6d] transition-all font-bold">Tìm hiểu về mình</a>
         </div>
-    </section>
+    </header>
 
-    <section class="py-20 px-6">
-        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-            <div class="bg-white p-8 rounded-[30px] shadow-xl border-2 border-pink-100 card-hover">
-                <h2 class="text-2xl font-bold text-pink-500 mb-4 border-b-2 border-pink-50 pill w-fit">Giới thiệu chút nè 🌸</h2>
-                <p class="leading-relaxed text-gray-600 italic">
-                    Mình là một cô gái yêu màu hồng, thích sự sáng tạo và đam mê tìm tòi những thứ mới lạ trên internet. Hiện tại mình đang tập tành làm web và đây là "ngôi nhà nhỏ" của mình!
-                </p>
-            </div>
-            <div class="grid grid-cols-2 gap-4">
-                <div class="bg-pink-100 p-6 rounded-2xl text-center shadow-sm">
-                    <span class="text-3xl">🎂</span>
-                    <p class="font-bold text-pink-600 mt-2">10/10</p>
-                </div>
-                <div class="bg-purple-100 p-6 rounded-2xl text-center shadow-sm">
-                    <span class="text-3xl">📍</span>
-                    <p class="font-bold text-purple-600 mt-2">Hà Nội</p>
-                </div>
-            </div>
+    <section id="about" class="py-20 px-6 max-w-4xl mx-auto">
+        <div class="glass-card p-10 rounded-[40px] shadow-2xl relative">
+            <span class="absolute -top-6 -left-6 text-5xl">🌸</span>
+            <h2 class="text-3xl font-bold text-[#ff4d6d] mb-6 flex items-center gap-2">
+                <i class="fa-solid fa-heart"></i> Đôi dòng về Quỳnh
+            </h2>
+            <p class="text-gray-700 leading-loose text-lg">
+                Chào cậu, rất vui vì cậu đã ghé thăm "chiếc" web nhỏ của mình! Mình là một cô nàng yêu cái đẹp, thích sự nhẹ nhàng nhưng cũng cực kỳ năng động. Mình tin rằng mỗi ngày trôi qua đều là một món quà, và mình đang cố gắng để tận hưởng nó một cách trọn vẹn nhất! 🎀
+            </p>
         </div>
     </section>
 
-    <section id="hobbies" class="py-20 bg-white rounded-[50px]">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-bold text-pink-500 mb-12">Sở thích cá nhân 🍭</h2>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <div class="p-6 bg-[#fff0f3] rounded-3xl card-hover">
-                    <div class="text-4xl mb-3">📸</div>
-                    <p class="font-bold">Chụp ảnh</p>
-                </div>
-                <div class="p-6 bg-[#f0f4ff] rounded-3xl card-hover">
-                    <div class="text-4xl mb-3">🐱</div>
-                    <p class="font-bold">Yêu mèo</p>
-                </div>
-                <div class="p-6 bg-[#fff9f0] rounded-3xl card-hover">
-                    <div class="text-4xl mb-3">🎵</div>
-                    <p class="font-bold">Nghe nhạc</p>
-                </div>
-                <div class="p-6 bg-[#f0fff4] rounded-3xl card-hover">
-                    <div class="text-4xl mb-3">✈️</div>
-                    <p class="font-bold">Du lịch</p>
-                </div>
+    <section class="py-16 px-6 max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold text-center text-[#ff4d6d] mb-12 font-cute text-5xl">Sở thích của mình 🍭</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="bg-white p-8 rounded-3xl shadow-md text-center hover:scale-105 transition">
+                <div class="text-5xl mb-4">🧋</div>
+                <p class="font-bold text-gray-700">Trà sữa</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md text-center hover:scale-105 transition">
+                <div class="text-5xl mb-4">🐱</div>
+                <p class="font-bold text-gray-700">Nuôi mèo</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md text-center hover:scale-105 transition">
+                <div class="text-5xl mb-4">💄</div>
+                <p class="font-bold text-gray-700">Makeup</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-md text-center hover:scale-105 transition">
+                <div class="text-5xl mb-4">🎬</div>
+                <p class="font-bold text-gray-700">Xem phim</p>
             </div>
         </div>
     </section>
 
-    <section id="moments" class="py-20 px-6">
+    <section class="py-20 bg-white/50 px-6">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-3xl font-bold text-center text-pink-500 mb-12 italic">Những khoảnh khắc đẹp ✨</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="aspect-square bg-pink-200 rounded-3xl flex items-center justify-center text-white font-bold rotate-2 shadow-lg overflow-hidden">
-                    <img src="https://picsum.photos/400/400?random=1" class="w-full h-full object-cover opacity-80" alt="Moment">
+            <h2 class="text-3xl font-bold text-center text-[#ff4d6d] mb-12">Album ảnh xinh xắn 📸</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="rounded-3xl overflow-hidden border-4 border-white shadow-xl rotate-1">
+                    <img src="https://picsum.photos/500/500?random=11" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-purple-200 rounded-3xl flex items-center justify-center text-white font-bold -rotate-2 shadow-lg overflow-hidden">
-                    <img src="https://picsum.photos/400/400?random=2" class="w-full h-full object-cover opacity-80" alt="Moment">
+                <div class="rounded-3xl overflow-hidden border-4 border-white shadow-xl -rotate-2">
+                    <img src="https://picsum.photos/500/500?random=12" class="w-full h-full object-cover">
                 </div>
-                <div class="aspect-square bg-yellow-200 rounded-3xl flex items-center justify-center text-white font-bold rotate-1 shadow-lg overflow-hidden">
-                    <img src="https://picsum.photos/400/400?random=3" class="w-full h-full object-cover opacity-80" alt="Moment">
+                <div class="rounded-3xl overflow-hidden border-4 border-white shadow-xl rotate-3">
+                    <img src="https://picsum.photos/500/500?random=13" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-20 text-center">
-        <div class="max-w-xl mx-auto px-6 bg-white p-12 rounded-[50px] shadow-2xl border-4 border-dashed border-pink-200">
-            <h2 class="text-3xl font-bold text-pink-500 mb-6 font-mono">Connect with me! 💌</h2>
-            <div class="flex justify-center gap-8 text-4xl mb-8">
-                <a href="#" class="text-blue-400 hover:scale-125 transition"><i class="fa-brands fa-facebook"></i></a>
-                <a href="#" class="text-pink-400 hover:scale-125 transition"><i class="fa-brands fa-instagram"></i></a>
-                <a href="mailto:email@của-bạn.com" class="text-yellow-500 hover:scale-125 transition"><i class="fa-solid fa-envelope"></i></a>
-            </div>
-            <p class="text-gray-400 italic">Rất vui được làm quen với mọi người!</p>
+    <footer class="py-20 text-center bg-[#ff85a1] text-white rounded-t-[50px]">
+        <h2 class="text-4xl font-cute mb-6">Kết nối với Quỳnh qua đây nha! 💌</h2>
+        <div class="flex justify-center gap-10 text-4xl mb-8">
+            <a href="#" class="hover:scale-125 transition"><i class="fa-brands fa-facebook-messenger"></i></a>
+            <a href="#" class="hover:scale-125 transition"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="hover:scale-125 transition"><i class="fa-brands fa-tiktok"></i></a>
         </div>
-    </section>
-
-    <footer class="py-10 text-center text-pink-300">
-        <p>Made with 💖 by Như Quỳnh</p>
+        <p class="opacity-80 font-medium">© 2026 Như Quỳnh. Gửi ngàn nụ hôn tới bạn! 💋</p>
     </footer>
 
 </body>
