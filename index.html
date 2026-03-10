@@ -1,95 +1,124 @@
-Đây là đoạn code HTML/CSS hoàn chỉnh để bạn dán vào file index.html. Tôi đã tối ưu giao diện hiện đại và gọn gàng, bạn chỉ cần copy từ dòng đầu đến dòng cuối cùng nhé:
-
-HTML
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Như Quỳnh | Portfolio</title>
+    <title>Thế giới của Như Quỳnh ✨</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        body { font-family: 'Quicksand', sans-serif; scroll-behavior: smooth; }
+        .pink-gradient { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .card-hover:hover { transform: translateY(-10px) rotate(2deg); transition: all 0.3s ease; }
+        .floating { animation: floating 3s ease-in-out infinite; }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-[#fff5f7] text-gray-800">
 
-    <nav class="fixed w-full bg-white/80 backdrop-blur-md shadow-sm z-50">
+    <nav class="fixed w-full bg-white/70 backdrop-blur-md z-50 border-b border-pink-100">
         <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Quynh.Dev</span>
-            <div class="space-x-8 font-medium">
-                <a href="#about" class="hover:text-blue-600 transition">Giới thiệu</a>
-                <a href="#projects" class="hover:text-blue-600 transition">Dự án</a>
-                <a href="#contact" class="hover:text-blue-600 transition">Liên hệ</a>
+            <span class="text-2xl font-bold text-pink-500 italic">Quynh ✨</span>
+            <div class="hidden md:flex space-x-6 text-pink-600 font-semibold">
+                <a href="#about" class="hover:text-pink-400">Về mình</a>
+                <a href="#hobbies" class="hover:text-pink-400">Sở thích</a>
+                <a href="#moments" class="hover:text-pink-400">Khoảnh khắc</a>
+                <a href="#contact" class="hover:text-pink-400">Chat nè</a>
             </div>
         </div>
     </nav>
 
-    <section id="about" class="pt-40 pb-20 px-6">
-        <div class="max-w-5xl mx-auto text-center">
-            <div class="w-32 h-32 bg-gradient-to-tr from-blue-500 to-purple-500 rounded-full mx-auto mb-8 flex items-center justify-center shadow-xl">
-                <i class="fa-solid fa-user text-5xl text-white"></i>
+    <section id="about" class="pt-32 pb-20 px-6 pink-gradient text-white rounded-b-[50px] shadow-lg">
+        <div class="max-w-4xl mx-auto text-center">
+            <div class="floating inline-block bg-white p-2 rounded-full shadow-2xl mb-8">
+                <img src="https://api.dicebear.com/7.x/adventurer/svg?seed=Quynh" alt="Avatar" class="w-32 h-32 rounded-full border-4 border-pink-200">
             </div>
-            <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">
-                Xin chào, mình là <span class="text-blue-600">Như Quỳnh</span>
-            </h1>
-            <p class="text-xl text-slate-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Mình là một người đam mê công nghệ và thiết kế. Đây là nơi mình chia sẻ những dự án cá nhân và hành trình học tập của mình.
-            </p>
-            <div class="flex justify-center gap-4">
-                <a href="#projects" class="bg-slate-900 text-white px-8 py-3 rounded-full font-semibold hover:bg-slate-800 transition shadow-lg">Xem dự án</a>
-                <a href="#contact" class="bg-white border border-slate-200 px-8 py-3 rounded-full font-semibold hover:bg-slate-50 transition shadow-sm">Liên hệ</a>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Chào cậu, mình là <span class="text-pink-100">Như Quỳnh</span> 🎀</h1>
+            <p class="text-xl opacity-90 font-medium italic">"Luôn mỉm cười và tận hưởng cuộc sống theo cách riêng của mình!"</p>
+        </div>
+    </section>
+
+    <section class="py-20 px-6">
+        <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div class="bg-white p-8 rounded-[30px] shadow-xl border-2 border-pink-100 card-hover">
+                <h2 class="text-2xl font-bold text-pink-500 mb-4 border-b-2 border-pink-50 pill w-fit">Giới thiệu chút nè 🌸</h2>
+                <p class="leading-relaxed text-gray-600 italic">
+                    Mình là một cô gái yêu màu hồng, thích sự sáng tạo và đam mê tìm tòi những thứ mới lạ trên internet. Hiện tại mình đang tập tành làm web và đây là "ngôi nhà nhỏ" của mình!
+                </p>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="bg-pink-100 p-6 rounded-2xl text-center shadow-sm">
+                    <span class="text-3xl">🎂</span>
+                    <p class="font-bold text-pink-600 mt-2">10/10</p>
+                </div>
+                <div class="bg-purple-100 p-6 rounded-2xl text-center shadow-sm">
+                    <span class="text-3xl">📍</span>
+                    <p class="font-bold text-purple-600 mt-2">Hà Nội</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-16 text-center">Dự án của mình</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                
-                <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="h-52 bg-slate-200 flex items-center justify-center">
-                        <i class="fa-solid fa-code text-4xl text-slate-400 group-hover:scale-110 transition"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-bold text-2xl mb-3">My First Website</h3>
-                        <p class="text-slate-600 mb-6 font-light">Đây là website portfolio đầu tiên mình tự xây dựng và đưa lên GitHub Pages.</p>
-                        <span class="text-xs font-bold tracking-widest uppercase bg-blue-100 text-blue-700 px-3 py-1 rounded">HTML / CSS</span>
-                    </div>
-                </div>
-
-                <div class="group bg-slate-50 rounded-2xl overflow-hidden border border-slate-100 hover:shadow-2xl transition-all">
-                    <div class="h-52 bg-slate-200 flex items-center justify-center">
-                        <i class="fa-solid fa-rocket text-4xl text-slate-400 group-hover:scale-110 transition"></i>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="font-bold text-2xl mb-3">Future Project</h3>
-                        <p class="text-slate-600 mb-6 font-light">Dự án này đang trong quá trình ấp ủ, sẽ sớm được ra mắt trong thời gian tới.</p>
-                        <span class="text-xs font-bold tracking-widest uppercase bg-purple-100 text-purple-700 px-3 py-1 rounded">Coming Soon</span>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="py-24">
+    <section id="hobbies" class="py-20 bg-white rounded-[50px]">
         <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-6">Let's Talk!</h2>
-            <p class="text-slate-600 mb-12 text-lg">Bạn có dự án thú vị nào muốn hợp tác không?</p>
-            <div class="flex justify-center gap-10 text-4xl">
-                <a href="https://github.com/vtnquynhh310" target="_blank" class="text-slate-400 hover:text-slate-900 transition"><i class="fa-brands fa-github"></i></a>
-                <a href="#" class="text-slate-400 hover:text-blue-600 transition"><i class="fa-brands fa-facebook"></i></a>
-                <a href="mailto:your-email@gmail.com" class="text-slate-400 hover:text-red-500 transition"><i class="fa-solid fa-envelope"></i></a>
+            <h2 class="text-3xl font-bold text-pink-500 mb-12">Sở thích cá nhân 🍭</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="p-6 bg-[#fff0f3] rounded-3xl card-hover">
+                    <div class="text-4xl mb-3">📸</div>
+                    <p class="font-bold">Chụp ảnh</p>
+                </div>
+                <div class="p-6 bg-[#f0f4ff] rounded-3xl card-hover">
+                    <div class="text-4xl mb-3">🐱</div>
+                    <p class="font-bold">Yêu mèo</p>
+                </div>
+                <div class="p-6 bg-[#fff9f0] rounded-3xl card-hover">
+                    <div class="text-4xl mb-3">🎵</div>
+                    <p class="font-bold">Nghe nhạc</p>
+                </div>
+                <div class="p-6 bg-[#f0fff4] rounded-3xl card-hover">
+                    <div class="text-4xl mb-3">✈️</div>
+                    <p class="font-bold">Du lịch</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 border-t border-slate-100 text-center text-slate-400 text-sm">
-        <p>&copy; 2026 Như Quỳnh. Built with GitHub Pages.</p>
+    <section id="moments" class="py-20 px-6">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-3xl font-bold text-center text-pink-500 mb-12 italic">Những khoảnh khắc đẹp ✨</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="aspect-square bg-pink-200 rounded-3xl flex items-center justify-center text-white font-bold rotate-2 shadow-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/400?random=1" class="w-full h-full object-cover opacity-80" alt="Moment">
+                </div>
+                <div class="aspect-square bg-purple-200 rounded-3xl flex items-center justify-center text-white font-bold -rotate-2 shadow-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/400?random=2" class="w-full h-full object-cover opacity-80" alt="Moment">
+                </div>
+                <div class="aspect-square bg-yellow-200 rounded-3xl flex items-center justify-center text-white font-bold rotate-1 shadow-lg overflow-hidden">
+                    <img src="https://picsum.photos/400/400?random=3" class="w-full h-full object-cover opacity-80" alt="Moment">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20 text-center">
+        <div class="max-w-xl mx-auto px-6 bg-white p-12 rounded-[50px] shadow-2xl border-4 border-dashed border-pink-200">
+            <h2 class="text-3xl font-bold text-pink-500 mb-6 font-mono">Connect with me! 💌</h2>
+            <div class="flex justify-center gap-8 text-4xl mb-8">
+                <a href="#" class="text-blue-400 hover:scale-125 transition"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="text-pink-400 hover:scale-125 transition"><i class="fa-brands fa-instagram"></i></a>
+                <a href="mailto:email@của-bạn.com" class="text-yellow-500 hover:scale-125 transition"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="text-gray-400 italic">Rất vui được làm quen với mọi người!</p>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-pink-300">
+        <p>Made with 💖 by Như Quỳnh</p>
     </footer>
 
 </body>
