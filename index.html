@@ -8,169 +8,165 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Quicksand', sans-serif; background: #fff5f7; color: #4a4a4a; scroll-behavior: smooth; }
+        body { font-family: 'Quicksand', sans-serif; background: #fdfcfb; color: #4a4a4a; scroll-behavior: smooth; }
         .font-serif { font-family: 'Playfair Display', serif; }
         
-        /* Màu đậm đà hơn */
         .text-primary { color: #ff2d75; }
-        .bg-primary { background-color: #ff2d75; }
-        .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); border: 2px solid #ffdeeb; border-radius: 30px; }
+        .glass { background: rgba(255, 255, 255, 0.7); backdrop-filter: blur(15px); border: 1px solid rgba(255, 255, 255, 0.5); border-radius: 30px; }
 
-        /* Thang kỹ năng */
-        .skill-container { width: 100%; background: #eee; border-radius: 10px; height: 12px; overflow: hidden; margin-top: 8px; }
-        .skill-fill { background: linear-gradient(90deg, #ff85a2, #ff2d75); height: 100%; border-radius: 10px; }
+        /* Custom Skill Bar đúng như ảnh mẫu */
+        .skill-container { width: 100%; background: #f0f0f0; border-radius: 100px; height: 10px; overflow: hidden; margin-top: 6px; }
+        .skill-fill { 
+            background: linear-gradient(90deg, #7ee081 0%, #eb9fc0 100%); 
+            height: 100%; 
+            border-radius: 100px; 
+        }
 
-        .floating { animation: float 4s ease-in-out infinite; }
+        .floating { animation: float 5s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-        
-        section { padding: 80px 20px; }
     </style>
 </head>
 <body>
 
-    <nav class="fixed w-full z-50 px-8 py-4 flex justify-between items-center bg-white/50 backdrop-blur-md border-b border-pink-100">
-        <span class="text-2xl font-black text-primary italic">Như Quỳnh.</span>
-        <div class="hidden md:flex space-x-6 text-[11px] font-bold uppercase tracking-widest">
-            <a href="#about" class="hover:text-primary">Giới thiệu</a>
-            <a href="#edu" class="hover:text-primary">Học vấn</a>
-            <a href="#skills" class="hover:text-primary">Kỹ năng</a>
-            <a href="#exp" class="hover:text-primary">Kinh nghiệm</a>
-            <a href="#moments" class="hover:text-primary">Kỷ niệm</a>
+    <nav class="fixed w-full z-50 px-8 py-4 flex justify-between items-center bg-white/40 backdrop-blur-md">
+        <span class="text-2xl font-black text-[#ff85a2] italic">Như Quỳnh.vn</span>
+        <div class="hidden md:flex space-x-6 text-[11px] font-extrabold uppercase tracking-widest text-gray-500">
+            <a href="#intro" class="hover:text-[#ff85a2]">Introduction</a>
+            <a href="#edu" class="hover:text-[#ff85a2]">Education</a>
+            <a href="#skills" class="hover:text-[#ff85a2]">Skills</a>
+            <a href="#exp" class="hover:text-[#ff85a2]">Experience</a>
         </div>
     </nav>
 
-    <header class="min-h-screen flex items-center justify-center pt-20">
+    <header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-20">
         <div class="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
-            <div class="text-center md:text-left order-2 md:order-1">
-                <h1 class="text-6xl md:text-8xl font-serif font-black text-gray-900 leading-none mb-6">
-                    VŨ THỊ <br> <span class="text-primary uppercase">NHƯ QUỲNH</span>
+            <div class="text-center md:text-left">
+                <h1 class="text-5xl md:text-7xl font-serif font-black text-gray-800 leading-tight mb-6">
+                    VŨ THỊ <br> <span class="text-[#ff85a2]">NHƯ QUỲNH</span>
                 </h1>
-                <p class="text-xl font-medium italic text-gray-500 mb-8">
-                    "Sự giao thoa giữa tư duy logic của những con số và tâm hồn rực rỡ của tuổi trẻ Ngoại thương."
-                </p>
-                <a href="#contact" class="bg-primary text-white px-10 py-4 rounded-full font-bold shadow-xl hover:scale-105 transition-all inline-block">Kết nối với mình</a>
+                <div class="glass p-8 mb-8 border-l-8 border-[#ff85a2]">
+                    <h3 class="text-xl font-bold mb-3 italic">Heluuu Introduction! ✨</h3>
+                    <p class="leading-loose text-gray-500">
+                        Mình là một cô gái đến từ <b>Hải Dương</b>, hiện đang là sinh viên năm 2 tại Ngoại thương. 
+                        Là một Libra chính hiệu, mình luôn đi tìm sự cân bằng giữa tính kỷ luật của những con số và sự năng động, nhiệt huyết trong công việc cộng đồng.
+                    </p>
+                </div>
+                <p class="text-lg italic text-gray-400">"Đam mê toán học, yêu những vẻ đẹp logic và luôn nỗ lực vì một phiên bản tốt hơn mỗi ngày."</p>
             </div>
-            <div class="order-1 md:order-2 flex justify-center">
-                <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-[60px] border-[12px] border-white shadow-2xl floating">
+            <div class="flex justify-center relative">
+                <img src="https://lh3.googleusercontent.com/d/1aPIWCDFdfAfskxf3CyaUMTJA_RoYBWsr" class="w-80 h-80 md:w-[450px] md:h-[450px] object-cover rounded-[50px] shadow-2xl border-[15px] border-white floating">
             </div>
         </div>
     </header>
 
-    <section id="about" class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-serif font-black text-primary mb-10 italic italic uppercase">Heluuu Introduction! 🎀</h2>
-        <div class="glass p-10 space-y-6 text-lg leading-loose">
-            <p>
-                Chào cậu, mình là <b>Như Quỳnh</b> - một cô gái Thiên Bình đến từ mảnh đất <b>Hải Dương</b> hiếu học. 
-                Là một "thành viên" của đại gia đình FTU, mình mang trong mình sự nhiệt huyết, năng nổ nhưng cũng không kém phần kỷ luật và logic.
-            </p>
-            <p>
-                <b>Đam mê:</b> Mình có một tình yêu mãnh liệt với các con số và khoa học tự nhiên. Giải mã một bài toán khó hay xây dựng một quy trình nhân sự bài bản chính là cách mình tìm thấy niềm vui trong cuộc sống.
-            </p>
+    <section id="skills" class="py-20 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="flex items-center gap-2 mb-8">
+                <span class="text-2xl">🌿</span>
+                <h2 class="text-3xl font-bold text-gray-800">Skills</h2>
+            </div>
+            <div class="glass p-10 shadow-sm">
+                <div class="space-y-8">
+                    <div>
+                        <p class="text-sm font-semibold text-gray-600 ml-1">Mathematics & Logic</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 92%"></div></div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-600 ml-1">English</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 85%"></div></div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-600 ml-1">Chinese</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 70%"></div></div>
+                    </div>
+                    <div>
+                        <p class="text-sm font-semibold text-gray-600 ml-1">Leadership</p>
+                        <div class="skill-container"><div class="skill-fill" style="width: 88%"></div></div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="edu" class="bg-white">
+    <section id="edu" class="py-20 px-6 bg-white/50">
         <div class="max-w-5xl mx-auto">
-            <h2 class="text-4xl font-serif font-black text-center mb-16 text-primary uppercase">Education 🎓</h2>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass p-8 hover:border-pink-400 transition">
-                    <h4 class="text-2xl font-bold mb-2">Đại học Ngoại thương</h4>
-                    <p class="text-primary font-bold mb-4">Sinh viên năm 2</p>
-                    <p class="text-gray-500 italic font-medium">Chuyên ngành tiêu chuẩn Kế toán – Kiểm toán. Nơi mình mài giũa tư duy nghề nghiệp mỗi ngày.</p>
+            <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Education</h2>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="glass p-10 hover:shadow-xl transition duration-500 group">
+                    <div class="flex gap-2 mb-6">
+                        <img src="https://lh3.googleusercontent.com/d/1w4xCcJ3T0u8LmM_sPfCgaucmUVDc8PMb" class="w-1/2 h-24 object-cover rounded-2xl">
+                        <img src="https://lh3.googleusercontent.com/d/1n-0JeAU1ma6p3kjiJ49CKKRTB7O7zthP" class="w-1/2 h-24 object-cover rounded-2xl">
+                    </div>
+                    <h4 class="text-2xl font-bold mb-2 group-hover:text-[#ff85a2]">Đại học Ngoại thương</h4>
+                    <p class="text-gray-400 font-bold text-xs mb-4">2024 - Hiện tại</p>
+                    <p class="text-gray-500 italic">Sinh viên năm 2 - Chuyên ngành tiêu chuẩn Kế toán – Kiểm toán.</p>
                 </div>
-                <div class="glass p-8 hover:border-pink-400 transition">
-                    <h4 class="text-2xl font-bold mb-2">THPT Kim Thành</h4>
-                    <p class="text-pink-300 font-bold mb-4">Alumni</p>
-                    <p class="text-gray-500 italic font-medium">Cái nôi nuôi dưỡng niềm đam mê với toán học và các môn tự nhiên từ những ngày đầu.</p>
+                <div class="glass p-10 hover:shadow-xl transition duration-500 group">
+                    <img src="https://lh3.googleusercontent.com/d/1C3NHOnVrR9c-4rR9-e3Z61BGvA94PAgE" class="w-full h-24 object-cover rounded-2xl mb-6">
+                    <h4 class="text-2xl font-bold mb-2 group-hover:text-[#ff85a2]">THPT Kim Thành</h4>
+                    <p class="text-gray-400 font-bold text-xs mb-4">Cựu học sinh</p>
+                    <p class="text-gray-500 italic">Nơi bắt nguồn cho đam mê tự nhiên và những con số.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="max-w-4xl mx-auto">
-        <h2 class="text-4xl font-serif font-black text-center mb-16 text-primary uppercase">Skills 🪄</h2>
-        <div class="grid md:grid-cols-2 gap-x-12 gap-y-8 glass p-10">
-            <div>
-                <div class="flex justify-between font-bold"><span>Toán học & Logic</span><span>95%</span></div>
-                <div class="skill-container"><div class="skill-fill" style="width: 95%"></div></div>
-            </div>
-            <div>
-                <div class="flex justify-between font-bold"><span>Quản lý nhân sự</span><span>85%</span></div>
-                <div class="skill-container"><div class="skill-fill" style="width: 85%"></div></div>
-            </div>
-            <div>
-                <div class="flex justify-between font-bold"><span>Microsoft Excel</span><span>80%</span></div>
-                <div class="skill-container"><div class="skill-fill" style="width: 80%"></div></div>
-            </div>
-            <div>
-                <div class="flex justify-between font-bold"><span>Làm việc nhóm</span><span>90%</span></div>
-                <div class="skill-container"><div class="skill-fill" style="width: 90%"></div></div>
-            </div>
-        </div>
-    </section>
-
-    <section id="exp" class="max-w-5xl mx-auto">
-        <h2 class="text-4xl font-serif font-black text-center mb-16 text-primary uppercase">Experience 💼</h2>
+    <section id="exp" class="py-20 px-6 max-w-5xl mx-auto">
+        <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Experience</h2>
         <div class="space-y-8">
             <div class="glass p-8 flex flex-col md:flex-row items-center gap-8">
-                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-32 h-32 rounded-3xl object-cover shadow-lg">
+                <img src="https://lh3.googleusercontent.com/d/1g9piD5o1KOGnS3B2jD6h1wec6DrSfwTC" class="w-32 h-32 rounded-3xl object-cover shadow-lg border-4 border-white">
                 <div>
-                    <h4 class="text-2xl font-bold">Phó Ban Nhân sự - CLB CFAA</h4>
-                    <p class="text-primary font-bold italic mb-3">Trường Đại học Ngoại thương (11/2025 – Present)</p>
-                    <p class="text-gray-500 italic">Điều phối nhân sự cho CLB Kế toán - Kiểm toán viên tương lai, xây dựng văn hóa kết nối cho các thành viên.</p>
+                    <h4 class="text-2xl font-bold">Phó Ban Nhân sự - CFAA</h4>
+                    <p class="text-[#ff85a2] font-bold text-sm mb-3">CLB Kế toán - Kiểm toán viên tương lai (11/2025 – Nay)</p>
+                    <p class="text-gray-500">Quản lý và kết nối con người - một hành trình thú vị tại FTU.</p>
                 </div>
             </div>
             <div class="glass p-8 flex flex-col md:flex-row items-center gap-8">
-                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=500" class="w-32 h-32 rounded-3xl object-cover shadow-lg">
+                <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=500" class="w-32 h-32 rounded-3xl object-cover shadow-lg border-4 border-white">
                 <div>
                     <h4 class="text-2xl font-bold">Gia sư môn Toán</h4>
-                    <p class="text-pink-400 font-bold italic mb-3">Freelance (09/2024 – Present)</p>
-                    <p class="text-gray-500 italic">Truyền lửa đam mê toán học và hỗ trợ các em học sinh chinh phục những con số khô khan trở nên thú vị hơn.</p>
+                    <p class="text-[#ff85a2] font-bold text-sm mb-3">Freelance (09/2024 – Nay)</p>
+                    <p class="text-gray-500">Giúp các em học sinh yêu thêm những con số logic.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-serif font-black text-primary mb-10 uppercase">Hobby ❤️</h2>
-        <div class="glass p-10 bg-pink-50 border-dashed">
-            <p class="text-lg italic leading-relaxed">
-                "Ngoài giờ học, mình thích đắm mình vào thế giới của các môn tự nhiên. Với mình, mỗi bài toán là một cuộc phiêu lưu, và cảm giác tìm ra đáp án sau những giờ trăn trở thật sự rất tuyệt vời!"
-            </p>
+    <section class="py-20 px-6 max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-serif font-bold text-[#ff85a2] mb-8 italic">My Hobby ❤️</h2>
+        <div class="glass p-10 italic text-lg text-gray-500">
+            "Mình cực kỳ thích học các môn tự nhiên, đặc biệt là môn Toán. Cảm giác chinh phục được một bài toán khó với mình giống như tìm thấy một mảnh ghép hoàn hảo vậy!"
         </div>
     </section>
 
-    <section id="moments" class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-serif font-black text-center mb-16 text-primary uppercase text-glow">Moments ✨</h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="space-y-4">
-                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="rounded-[30px] border-4 border-white shadow-lg hover:scale-105 transition">
-                <p class="text-xs font-bold text-center italic">Chút nắng nhẹ FTU ☀️</p>
+    <section id="moments" class="py-20 px-6">
+        <h2 class="text-4xl font-serif font-black text-center mb-16 italic text-[#ff85a2]">Moments ✨</h2>
+        <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-4">
+            <div class="space-y-3">
+                <img src="https://lh3.googleusercontent.com/d/1osLkBY2RLb1_f4Wpt81UYvCEEYmz8x_0" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:rotate-2 transition">
+                <p class="text-xs text-center font-bold italic">Nắng sân trường FTU</p>
             </div>
-            <div class="space-y-4 mt-8">
-                <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="rounded-[30px] border-4 border-white shadow-lg hover:scale-105 transition">
-                <p class="text-xs font-bold text-center italic">CFAA Team Building 💖</p>
+            <div class="space-y-3 mt-10">
+                <img src="https://lh3.googleusercontent.com/d/1THBf1kFLgcS9TKTgrcsaWajmNM4H3k2l" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:-rotate-2 transition">
+                <p class="text-xs text-center font-bold italic">Cùng team CFAA</p>
             </div>
-            <div class="space-y-4">
-                <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="rounded-[30px] border-4 border-white shadow-lg hover:scale-105 transition">
-                <p class="text-xs font-bold text-center italic">Góc học tập nhỏ 📚</p>
+            <div class="space-y-3">
+                <img src="https://lh3.googleusercontent.com/d/16aXpCakkvds0x4qZnR_Za9upMWCB4mR-" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:rotate-2 transition">
+                <p class="text-xs text-center font-bold italic">Góc nhỏ yêu thương</p>
             </div>
-            <div class="space-y-4 mt-8">
-                <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="rounded-[30px] border-4 border-white shadow-lg hover:scale-105 transition">
-                <p class="text-xs font-bold text-center italic">Hải Dương trong tôi 🌿</p>
+            <div class="space-y-3 mt-10">
+                <img src="https://lh3.googleusercontent.com/d/1cJtopfcMYns_hk0GSOTbAg4dJIyk8xAy" class="h-80 w-full object-cover rounded-[40px] shadow-md border-4 border-white hover:-rotate-2 transition">
+                <p class="text-xs text-center font-bold italic">Hải Dương bình yên</p>
             </div>
         </div>
     </section>
 
-    <footer id="contact" class="py-32 text-center bg-white rounded-t-[100px] shadow-inner">
-        <h2 class="text-5xl font-serif font-black italic mb-12">Let's connect!</h2>
-        <div class="flex flex-col md:flex-row justify-center gap-10">
-            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="bg-primary text-white px-12 py-4 rounded-full font-bold shadow-lg hover:bg-black transition flex items-center gap-2 justify-center">
-                <i class="fa-brands fa-facebook"></i> Facebook
-            </a>
-            <a href="mailto:nhuquynhh3110@gmail.com" class="border-2 border-primary text-primary px-12 py-4 rounded-full font-bold hover:bg-primary hover:text-white transition flex items-center gap-2 justify-center">
-                <i class="fa-solid fa-envelope"></i> Email Me
-            </a>
+    <footer id="contact" class="py-32 text-center bg-white rounded-t-[80px]">
+        <h2 class="text-5xl font-serif font-bold italic mb-12">Contact Me</h2>
+        <div class="flex justify-center gap-10">
+            <a href="https://www.facebook.com/nhuwquynh.vt/" target="_blank" class="text-[#ff85a2] text-4xl hover:scale-125 transition"><i class="fa-brands fa-facebook"></i></a>
+            <a href="mailto:nhuquynhh3110@gmail.com" class="text-[#ff85a2] text-4xl hover:scale-125 transition"><i class="fa-solid fa-envelope"></i></a>
         </div>
         <p class="mt-20 text-[10px] font-black uppercase tracking-[1em] opacity-30">© 2026 VŨ THỊ NHƯ QUỲNH</p>
     </footer>
