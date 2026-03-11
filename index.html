@@ -185,7 +185,8 @@ Education
 
 <div class="grid md:grid-cols-2 gap-12">
 
-<div class="glass p-12 border-l-8 border-pink-200">
+<div class="glass p-12 border-l-8 border-pink-200 floating"
+style="box-shadow:0 25px 60px rgba(255,133,162,0.35);">
 
 <img src="đhngoai thuong cfaa.jpg"
 class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
@@ -205,7 +206,8 @@ Sophomore | Accounting & Auditing (Standard Program)
 </div>
 
 
-<div class="glass p-12 border-l-8 border-pink-200">
+<div class="glass p-12 border-l-8 border-pink-200 floating"
+style="box-shadow:0 25px 60px rgba(255,133,162,0.35);">
 
 <img src="cấp 3.jpg"
 class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
@@ -383,34 +385,6 @@ I am always open to learning, collaborating and exploring new opportunities.
 </div>
 
 </footer>
-<script>
 
-function createFlower(){
-
-const flower=document.createElement("div")
-
-flower.classList.add("flower")
-
-const icons=["🌸","💗","🫧"]
-
-flower.innerHTML=icons[Math.floor(Math.random()*icons.length)]
-
-flower.style.left=Math.random()*100+"vw"
-
-flower.style.animationDuration=(Math.random()*5+5)+"s"
-
-flower.style.fontSize=(Math.random()*10+15)+"px"
-
-document.body.appendChild(flower)
-
-setTimeout(()=>{
-flower.remove()
-},10000)
-
-}
-
-setInterval(createFlower,600)
-
-</script>
 </body>
 </html>
