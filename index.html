@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vu Thi Nhu Quynh | Portfolio</title>
+<title>Vu Thi Nhu Quynh | Professional Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&family=Playfair+Display:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
@@ -31,303 +30,322 @@ color:#ff85a2;
 }
 
 .bg-accent{
-background:#ff85a2;
+background-color:#ff85a2;
 }
 
 .glass{
 background:rgba(255,255,255,0.8);
-backdrop-filter:blur(10px);
-border-radius:30px;
-padding:30px;
-transition:0.3s;
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,0.5);
+border-radius:40px;
 }
 
-.glass:hover{
-transform:translateY(-6px);
-box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.skill-bar{
-background:#eee;
+.skill-container{
+width:100%;
+background:#f0f0f0;
+border-radius:100px;
 height:10px;
-border-radius:20px;
-margin-top:6px;
+overflow:hidden;
+margin-top:8px;
 }
 
 .skill-fill{
+background:linear-gradient(90deg,#98ddca 0%,#ff85a2 100%);
 height:100%;
-border-radius:20px;
-background:linear-gradient(90deg,#98ddca,#ff85a2);
+border-radius:100px;
 }
 
-img{
-border-radius:20px;
+.floating{
+animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-15px);}
+}
+
+.moment-card img{
+border:10px solid white;
+box-shadow:0 15px 35px rgba(255,133,162,0.15);
+transition:0.5s;
+object-fit:cover;
+}
+
+.moment-card:hover img{
+transform:translateY(-10px) rotate(2deg);
 }
 
 </style>
-
 </head>
 
 <body>
 
 
-<!-- NAVBAR -->
+<nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center bg-white/40 backdrop-blur-md border-b border-pink-100">
 
-<nav class="flex justify-between items-center p-6 bg-white/60 backdrop-blur-md sticky top-0">
+<span class="text-3xl font-black text-accent italic tracking-tighter">
+Quynh.vn
+</span>
 
-<h1 class="text-2xl font-bold text-accent">
-Quynh Portfolio
-</h1>
+<div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
 
-<div class="space-x-6 text-sm font-semibold">
-
-<a href="#about">About</a>
-<a href="#education">Education</a>
-<a href="#skills">Skills</a>
-<a href="#experience">Experience</a>
-<a href="#moments">Moments</a>
+<a href="#intro" class="hover:text-accent transition">Introduction</a>
+<a href="#edu" class="hover:text-accent transition">Education</a>
+<a href="#skills" class="hover:text-accent transition">Skills</a>
+<a href="#exp" class="hover:text-accent transition">Experience</a>
+<a href="#moments" class="hover:text-accent transition">Moments</a>
 
 </div>
-
 </nav>
 
 
-<!-- INTRO -->
+<header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-24">
 
-<section class="min-h-screen flex items-center justify-center px-6">
+<div class="max-w-6xl grid md:grid-cols-2 gap-16 items-center">
 
-<div class="grid md:grid-cols-2 gap-12 max-w-6xl items-center">
+<div class="order-2 md:order-1 relative z-10">
 
-<div>
-
-<h1 class="text-6xl font-serif font-black mb-6">
-
+<h1 class="text-6xl md:text-8xl font-serif font-black text-gray-900 leading-[0.85] mb-8 uppercase">
 VU THI <br>
 <span class="text-accent">NHU QUYNH</span>
-
 </h1>
 
-<p class="text-gray-600 mb-6">
+<div class="glass p-12 mb-8 border-l-[12px] border-accent shadow-sm">
 
-Sophomore student at Foreign Trade University  
-Major: Accounting & Auditing
+<h3 class="text-2xl font-bold mb-4 italic text-gray-800 underline decoration-pink-100 decoration-4">
+Introduction ✨
+</h3>
 
+<p class="leading-relaxed text-gray-600 font-medium text-lg mb-4">
+I am a sophomore student from <b>Hai Duong</b>, currently studying at <b>Foreign Trade University (FTU)</b>.
 </p>
 
-<a href="#contact" class="bg-accent text-white px-6 py-3 rounded-full">
+<p class="leading-relaxed text-gray-600 font-medium">
+Combining FTU's dynamic environment with my disciplined foundation, I aim to merge logical reasoning with effective human resource leadership.
+</p>
 
-Contact me
+</div>
 
+<a href="#contact" class="bg-accent text-white px-10 py-5 rounded-full font-bold shadow-xl hover:brightness-110 transition-all">
+Get in touch
 </a>
 
 </div>
 
-<div>
+<div class="order-1 md:order-2 flex justify-center relative">
 
-<img src="LINK_ANH_CHAN_DUNG" class="w-80 mx-auto shadow-xl">
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about" class="py-20 max-w-5xl mx-auto px-6 text-center">
-
-<h2 class="text-4xl font-serif font-bold mb-12 text-accent">
-About Me
-</h2>
-
-<div class="grid md:grid-cols-3 gap-8">
-
-<div class="glass">
-<h3 class="font-bold text-lg mb-2">🎓 Academic</h3>
-<p>Accounting & Auditing student at FTU.</p>
-</div>
-
-<div class="glass">
-<h3 class="font-bold text-lg mb-2">👥 Leadership</h3>
-<p>Vice Head of HR at CFAA club.</p>
-</div>
-
-<div class="glass">
-<h3 class="font-bold text-lg mb-2">📚 Teaching</h3>
-<p>Mathematics tutor.</p>
-</div>
+<img src="DAN_LINK_ANH_CHAN_DUNG_VAO_DAY"
+class="w-80 h-80 md:w-[480px] md:h-[480px] object-cover rounded-[70px] border-[15px] border-white shadow-2xl floating">
 
 </div>
 
-</section>
+</div>
+</header>
 
 
-<!-- EDUCATION -->
 
-<section id="education" class="py-20 bg-white/50">
+<section id="edu" class="py-24 px-6">
 
-<div class="max-w-5xl mx-auto px-6">
+<div class="max-w-6xl mx-auto">
 
-<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
-
+<h2 class="text-5xl font-serif font-black text-center mb-20 italic text-accent uppercase tracking-widest">
 Education
-
 </h2>
 
-<div class="grid md:grid-cols-2 gap-10">
+<div class="grid md:grid-cols-2 gap-12">
 
-<div class="glass">
+<div class="glass p-12 border-l-8 border-accent">
 
-<img src="LINK_ANH_FTU" class="mb-4">
+<img src="DAN_LINK_ANH_FTU_VAO_DAY"
+class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
 
-<h3 class="font-bold text-lg">
+<h4 class="text-3xl font-bold mb-3 text-gray-800">
 Foreign Trade University
-</h3>
+</h4>
 
-<p>2024 – Present</p>
+<p class="text-pink-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">
+2024 - Present
+</p>
+
+<p class="text-gray-500 font-medium italic text-lg leading-relaxed">
+Sophomore | Accounting & Auditing (Standard Program)
+</p>
 
 </div>
 
-<div class="glass">
 
-<img src="LINK_ANH_KIM_THANH" class="mb-4">
+<div class="glass p-12 border-l-8 border-green-200">
 
-<h3 class="font-bold text-lg">
+<img src="DAN_LINK_ANH_TRUONG_CAP_3_VAO_DAY"
+class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
+
+<h4 class="text-3xl font-bold mb-3 text-gray-800">
 Kim Thanh High School
-</h3>
+</h4>
 
-<p>Graduated with strong performance in mathematics.</p>
+<p class="text-green-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">
+Alumni
+</p>
+
+<p class="text-gray-500 font-medium italic text-lg leading-relaxed">
+Where my love for Mathematics and logic began.
+</p>
 
 </div>
 
 </div>
 
 </div>
-
 </section>
 
 
-<!-- SKILLS -->
 
-<section id="skills" class="py-20 max-w-4xl mx-auto px-6">
+<section id="skills" class="py-24 px-6">
 
-<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
+<div class="max-w-4xl mx-auto">
 
-Skills
-
+<h2 class="text-5xl font-serif font-bold text-gray-800 mb-14 text-center">
+My Skills
 </h2>
 
-<div class="glass">
+<div class="glass p-14">
 
-<p class="font-semibold">Teamwork</p>
-<div class="skill-bar"><div class="skill-fill" style="width:95%"></div></div>
+<div class="space-y-10">
 
-<br>
-
-<p class="font-semibold">Leadership</p>
-<div class="skill-bar"><div class="skill-fill" style="width:90%"></div></div>
-
-<br>
-
-<p class="font-semibold">Critical Thinking</p>
-<div class="skill-bar"><div class="skill-fill" style="width:92%"></div></div>
-
-<br>
-
-<p class="font-semibold">Microsoft Office</p>
-<div class="skill-bar"><div class="skill-fill" style="width:85%"></div></div>
-
+<div>
+<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
+Teamwork & Collaboration
+</p>
+<div class="skill-container"><div class="skill-fill" style="width:95%"></div></div>
 </div>
 
+<div>
+<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
+Leadership & Management
+</p>
+<div class="skill-container"><div class="skill-fill" style="width:88%"></div></div>
+</div>
+
+<div>
+<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
+Critical Thinking & Logic
+</p>
+<div class="skill-container"><div class="skill-fill" style="width:92%"></div></div>
+</div>
+
+<div>
+<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
+Microsoft Office
+</p>
+<div class="skill-container"><div class="skill-fill" style="width:85%"></div></div>
+</div>
+
+</div>
+</div>
+</div>
 </section>
 
 
-<!-- EXPERIENCE -->
 
-<section id="experience" class="py-20 bg-white/50">
+<section id="exp" class="py-24 px-6 max-w-5xl mx-auto">
 
-<div class="max-w-5xl mx-auto px-6">
-
-<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
+<h2 class="text-5xl font-serif font-black text-center mb-20 italic text-accent uppercase tracking-widest">
 Experience
 </h2>
 
-<div class="grid md:grid-cols-2 gap-10">
+<div class="space-y-12">
 
-<div class="glass">
 
-<img src="ANH_CFAA" class="mb-4">
+<div class="glass p-10 flex flex-col md:flex-row items-center gap-12">
 
-<h3 class="font-bold text-lg">
-Vice Head of HR – CFAA
-</h3>
+<img src="DAN_LINK_ANH_CFAA"
+class="w-40 h-40 object-cover rounded-3xl shadow-lg">
 
-<p>Future Accountants & Auditors Club</p>
+<div>
+
+<h4 class="text-3xl font-bold text-gray-800">
+Vice Head of HR - CFAA
+</h4>
+
+<p class="text-accent font-bold text-md mb-4 italic">
+Future Accountants & Auditors Club (11/2025 – Present)
+</p>
+
+<p class="text-gray-500 font-medium text-lg leading-relaxed">
+Leading internal HR strategies, managing club members, and maintaining professional culture.
+</p>
 
 </div>
+</div>
 
-<div class="glass">
 
-<img src="ANH_TUTOR" class="mb-4">
 
-<h3 class="font-bold text-lg">
+<div class="glass p-10 flex flex-col md:flex-row items-center gap-12">
+
+<img src="DAN_LINK_ANH_TUTOR"
+class="w-40 h-40 object-cover rounded-3xl shadow-lg">
+
+<div>
+
+<h4 class="text-3xl font-bold text-gray-800">
 Mathematics Tutor
-</h3>
+</h4>
 
-<p>Freelance mathematics tutor</p>
+<p class="text-accent font-bold text-md mb-4 italic">
+Freelance (09/2024 – Present)
+</p>
+
+<p class="text-gray-500 font-medium text-lg leading-relaxed">
+Simplifying complex mathematical concepts and building logical foundation.
+</p>
 
 </div>
-
 </div>
+
 
 </div>
 
 </section>
 
 
-<!-- MOMENTS -->
 
-<section id="moments" class="py-20">
+<section id="moments" class="py-24 px-6 bg-pink-50/20">
 
-<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
-
-Moments
-
+<h2 class="text-5xl font-serif font-black text-center mb-20 italic text-accent uppercase tracking-widest">
+Daily Moments ✨
 </h2>
 
-<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
 
-<img src="ANH1">
-<img src="ANH2">
-<img src="ANH3">
-<img src="ANH4">
+<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_1" class="h-80 w-full rounded-[40px]"></div>
+<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_2" class="h-80 w-full rounded-[40px]"></div>
+<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_3" class="h-80 w-full rounded-[40px]"></div>
+<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_4" class="h-80 w-full rounded-[40px]"></div>
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
 
-<section id="contact" class="py-20 text-center">
+<footer id="contact" class="py-32 text-center bg-white rounded-t-[100px] shadow-inner">
 
-<h2 class="text-4xl font-serif font-bold mb-8">
-Let's Connect
+<h2 class="text-6xl font-serif font-black italic mb-16 text-gray-800">
+Let's connect.
 </h2>
 
-<div class="text-3xl space-x-6 text-accent">
+<div class="flex justify-center gap-16">
 
-<a href="https://facebook.com"><i class="fab fa-facebook"></i></a>
-<a href="mailto:yourmail@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://www.facebook.com/nhuwquynh.vt/" class="text-accent text-5xl">
+<i class="fa-brands fa-facebook"></i>
+</a>
+
+<a href="mailto:nhuquynhh3110@gmail.com" class="text-accent text-5xl">
+<i class="fa-solid fa-envelope"></i>
+</a>
 
 </div>
 
-</section>
-
-
-<footer class="text-center py-6 text-sm opacity-60">
-© 2026 Vu Thi Nhu Quynh
 </footer>
 
 </body>
