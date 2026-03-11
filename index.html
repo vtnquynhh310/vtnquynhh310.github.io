@@ -383,6 +383,34 @@ I am always open to learning, collaborating and exploring new opportunities.
 </div>
 
 </footer>
+<script>
 
+function createFlower(){
+
+const flower=document.createElement("div")
+
+flower.classList.add("flower")
+
+const icons=["🌸","💗","🫧"]
+
+flower.innerHTML=icons[Math.floor(Math.random()*icons.length)]
+
+flower.style.left=Math.random()*100+"vw"
+
+flower.style.animationDuration=(Math.random()*5+5)+"s"
+
+flower.style.fontSize=(Math.random()*10+15)+"px"
+
+document.body.appendChild(flower)
+
+setTimeout(()=>{
+flower.remove()
+},10000)
+
+}
+
+setInterval(createFlower,600)
+
+</script>
 </body>
 </html>
