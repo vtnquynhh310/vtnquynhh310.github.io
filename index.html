@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Vu Thi Nhu Quynh Portfolio</title>
+<title>Vu Thi Nhu Quynh | Portfolio</title>
 
 <script src="https://cdn.tailwindcss.com"></script>
 
@@ -17,67 +16,47 @@
 
 body{
 font-family:'Quicksand',sans-serif;
-background:linear-gradient(135deg,#fdfcff,#f3f4ff,#e6f7ff,#fef0ff);
-overflow-x:hidden;
-color:#444;
+background:#fffafb;
+color:#4a4a4a;
+scroll-behavior:smooth;
 }
 
-/* CÁNH HOA RƠI */
-
-.petal{
-position:fixed;
-top:-50px;
-width:12px;
-height:12px;
-background:#ff9ecf;
-border-radius:50%;
-opacity:0.7;
-animation:fall linear infinite;
+.font-serif{
+font-family:'Playfair Display',serif;
 }
-
-@keyframes fall{
-0%{transform:translateY(0) rotate(0deg);}
-100%{transform:translateY(120vh) rotate(360deg);}
-}
-
-/* màu chính */
 
 .text-accent{
-color:#6c63ff;
+color:#ff85a2;
 }
 
 .bg-accent{
-background:linear-gradient(135deg,#ff9ecf,#6c63ff,#8ed8c6);
+background:#ff85a2;
 }
 
-/* card */
-
-.card{
+.glass{
 background:rgba(255,255,255,0.8);
 backdrop-filter:blur(10px);
-border-radius:25px;
-padding:25px;
+border-radius:30px;
+padding:30px;
 transition:0.3s;
 }
 
-.card:hover{
+.glass:hover{
 transform:translateY(-6px);
 box-shadow:0 10px 30px rgba(0,0,0,0.1);
 }
 
-/* skill */
-
-.skillbar{
-height:10px;
+.skill-bar{
 background:#eee;
+height:10px;
 border-radius:20px;
 margin-top:6px;
 }
 
-.skillfill{
+.skill-fill{
 height:100%;
 border-radius:20px;
-background:linear-gradient(90deg,#ff9ecf,#6c63ff,#8ed8c6);
+background:linear-gradient(90deg,#98ddca,#ff85a2);
 }
 
 img{
@@ -90,16 +69,6 @@ border-radius:20px;
 
 <body>
 
-<!-- CÁNH HOA -->
-
-<div class="petal" style="left:10%;animation-duration:9s;"></div>
-<div class="petal" style="left:30%;animation-duration:11s;"></div>
-<div class="petal" style="left:50%;animation-duration:8s;"></div>
-<div class="petal" style="left:70%;animation-duration:10s;"></div>
-<div class="petal" style="left:90%;animation-duration:12s;"></div>
-
-
-<!-- NAVBAR -->
 
 <nav class="flex justify-between items-center p-6 bg-white/60 backdrop-blur-md sticky top-0">
 
@@ -120,7 +89,6 @@ Quynh Portfolio
 </nav>
 
 
-<!-- INTRO -->
 
 <section class="min-h-screen flex items-center justify-center px-6">
 
@@ -128,14 +96,14 @@ Quynh Portfolio
 
 <div>
 
-<h1 class="text-6xl font-black mb-6">
+<h1 class="text-6xl font-serif font-black mb-6">
 
 VU THI <br>
 <span class="text-accent">NHU QUYNH</span>
 
 </h1>
 
-<p class="mb-6">
+<p class="text-gray-600 mb-6">
 
 Sophomore student at Foreign Trade University  
 Major: Accounting & Auditing
@@ -161,28 +129,27 @@ Contact me
 </section>
 
 
-<!-- ABOUT -->
 
 <section id="about" class="py-20 max-w-5xl mx-auto px-6 text-center">
 
-<h2 class="text-4xl font-bold mb-12 text-accent">
+<h2 class="text-4xl font-serif font-bold mb-12 text-accent">
 About Me
 </h2>
 
 <div class="grid md:grid-cols-3 gap-8">
 
-<div class="card">
-<h3 class="font-bold mb-2">🎓 Academic</h3>
+<div class="glass">
+<h3 class="font-bold text-lg mb-2">🎓 Academic</h3>
 <p>Accounting & Auditing student at FTU</p>
 </div>
 
-<div class="card">
-<h3 class="font-bold mb-2">👥 Leadership</h3>
+<div class="glass">
+<h3 class="font-bold text-lg mb-2">👥 Leadership</h3>
 <p>Vice Head of HR at CFAA club</p>
 </div>
 
-<div class="card">
-<h3 class="font-bold mb-2">📚 Teaching</h3>
+<div class="glass">
+<h3 class="font-bold text-lg mb-2">📚 Teaching</h3>
 <p>Mathematics tutor</p>
 </div>
 
@@ -191,23 +158,24 @@ About Me
 </section>
 
 
-<!-- EDUCATION -->
 
-<section id="education" class="py-20 bg-white/40">
+<section id="education" class="py-20 bg-white/50">
 
 <div class="max-w-5xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12 text-accent">
+<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
+
 Education
+
 </h2>
 
 <div class="grid md:grid-cols-2 gap-10">
 
-<div class="card">
+<div class="glass">
 
 <img src="LINK_ANH_FTU" class="mb-4">
 
-<h3 class="font-bold">
+<h3 class="font-bold text-lg">
 Foreign Trade University
 </h3>
 
@@ -215,11 +183,11 @@ Foreign Trade University
 
 </div>
 
-<div class="card">
+<div class="glass">
 
 <img src="LINK_ANH_KIM_THANH" class="mb-4">
 
-<h3 class="font-bold">
+<h3 class="font-bold text-lg">
 Kim Thanh High School
 </h3>
 
@@ -234,40 +202,41 @@ Kim Thanh High School
 </section>
 
 
-<!-- SKILLS -->
 
 <section id="skills" class="py-20 max-w-4xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12 text-accent">
+<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
+
 Skills
+
 </h2>
 
-<div class="card">
+<div class="glass">
 
-<p>Teamwork</p>
-<div class="skillbar">
-<div class="skillfill" style="width:95%"></div>
+<p class="font-semibold">Teamwork</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:95%"></div>
 </div>
 
 <br>
 
-<p>Leadership</p>
-<div class="skillbar">
-<div class="skillfill" style="width:90%"></div>
+<p class="font-semibold">Leadership</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:90%"></div>
 </div>
 
 <br>
 
-<p>Critical Thinking</p>
-<div class="skillbar">
-<div class="skillfill" style="width:92%"></div>
+<p class="font-semibold">Critical Thinking</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:92%"></div>
 </div>
 
 <br>
 
-<p>Microsoft Office</p>
-<div class="skillbar">
-<div class="skillfill" style="width:85%"></div>
+<p class="font-semibold">Microsoft Office</p>
+<div class="skill-bar">
+<div class="skill-fill" style="width:85%"></div>
 </div>
 
 </div>
@@ -275,21 +244,22 @@ Skills
 </section>
 
 
-<!-- EXPERIENCE -->
 
-<section id="experience" class="py-20 bg-white/40">
+<section id="experience" class="py-20 bg-white/50">
 
 <div class="max-w-4xl mx-auto px-6">
 
-<h2 class="text-4xl font-bold text-center mb-12 text-accent">
+<h2 class="text-4xl font-serif font-bold text-center mb-12 text-accent">
+
 Experience
+
 </h2>
 
 <div class="space-y-6">
 
-<div class="card flex gap-4 items-center">
+<div class="glass flex gap-4 items-center">
 
-<i class="fa-solid fa-users text-purple-500"></i>
+<i class="fa-solid fa-users text-2xl text-accent"></i>
 
 <div>
 
@@ -303,9 +273,9 @@ Vice Head of HR – CFAA
 
 </div>
 
-<div class="card flex gap-4 items-center">
+<div class="glass flex gap-4 items-center">
 
-<i class="fa-solid fa-calculator text-green-400"></i>
+<i class="fa-solid fa-calculator text-2xl text-green-400"></i>
 
 <div>
 
@@ -326,42 +296,53 @@ Mathematics Tutor
 </section>
 
 
-<!-- MOMENTS -->
 
-<section id="moments" class="py-20">
+<section id="moments" class="py-24 px-6 bg-pink-50/20">
 
-<h2 class="text-4xl font-bold text-center mb-12 text-accent">
+<h2 class="text-4xl font-serif font-black text-center mb-16 text-accent">
 Moments
 </h2>
 
-<div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 px-6">
+<div class="columns-2 md:columns-4 gap-4 space-y-4 max-w-6xl mx-auto">
 
-<img src="ANH1">
-<img src="ANH2">
-<img src="ANH3">
-<img src="ANH4">
+<img src="ANH1" class="w-full shadow-md hover:scale-105 transition">
+
+<img src="ANH2" class="w-full shadow-md hover:scale-105 transition">
+
+<img src="ANH3" class="w-full shadow-md hover:scale-105 transition">
+
+<img src="ANH4" class="w-full shadow-md hover:scale-105 transition">
+
+<img src="ANH5" class="w-full shadow-md hover:scale-105 transition">
+
+<img src="ANH6" class="w-full shadow-md hover:scale-105 transition">
 
 </div>
 
 </section>
 
 
-<!-- CONTACT -->
 
 <section id="contact" class="py-20 text-center">
 
-<h2 class="text-4xl font-bold mb-8">
+<h2 class="text-4xl font-serif font-bold mb-8">
 Let's Connect
 </h2>
 
 <div class="text-3xl space-x-6 text-accent">
 
-<a href="#"><i class="fab fa-facebook"></i></a>
-<a href="#"><i class="fa-solid fa-envelope"></i></a>
+<a href="https://facebook.com">
+<i class="fab fa-facebook"></i>
+</a>
+
+<a href="mailto:yourmail@gmail.com">
+<i class="fa-solid fa-envelope"></i>
+</a>
 
 </div>
 
 </section>
+
 
 
 <footer class="text-center py-6 text-sm opacity-60">
