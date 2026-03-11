@@ -75,17 +75,23 @@ object-fit:cover;
 transform:translateY(-10px) rotate(2deg);
 }
 
+.exp-img{
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:30px;
+border:8px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
 </style>
 </head>
 
 <body>
 
-
 <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center bg-white/40 backdrop-blur-md border-b border-pink-100">
 
-<span class="text-3xl font-black text-accent italic tracking-tighter">
-Quynh.vn
-</span>
+<span class="text-3xl font-black text-accent italic tracking-tighter">Quynh.vn</span>
 
 <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
 
@@ -96,8 +102,8 @@ Quynh.vn
 <a href="#moments" class="hover:text-accent transition">Moments</a>
 
 </div>
-</nav>
 
+</nav>
 
 <header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-24">
 
@@ -135,13 +141,16 @@ Get in touch
 <div class="order-1 md:order-2 flex justify-center relative">
 
 <img src="DAN_LINK_ANH_CHAN_DUNG_VAO_DAY"
-class="w-80 h-80 md:w-[480px] md:h-[480px] object-cover rounded-[70px] border-[15px] border-white shadow-2xl floating">
+class="w-80 h-80 md:w-[480px] md:h-[480px] object-cover rounded-[70px] border-[15px] border-white shadow-2xl floating relative z-10">
+
+<div class="absolute -top-10 -left-10 text-9xl text-pink-100 opacity-50">
+🌸
+</div>
 
 </div>
 
 </div>
 </header>
-
 
 
 <section id="edu" class="py-24 px-6">
@@ -157,94 +166,40 @@ Education
 <div class="glass p-12 border-l-8 border-accent">
 
 <img src="DAN_LINK_ANH_FTU_VAO_DAY"
-class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
+class="w-full h-40 object-cover rounded-3xl mb-6">
 
-<h4 class="text-3xl font-bold mb-3 text-gray-800">
-Foreign Trade University
-</h4>
+<h4 class="text-3xl font-bold mb-3">Foreign Trade University</h4>
 
 <p class="text-pink-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">
 2024 - Present
 </p>
 
-<p class="text-gray-500 font-medium italic text-lg leading-relaxed">
-Sophomore | Accounting & Auditing (Standard Program)
+<p class="text-gray-500 italic text-lg">
+Sophomore | Accounting & Auditing (Standard Program).
 </p>
 
 </div>
 
-
 <div class="glass p-12 border-l-8 border-green-200">
 
 <img src="DAN_LINK_ANH_TRUONG_CAP_3_VAO_DAY"
-class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
+class="w-full h-40 object-cover rounded-3xl mb-6">
 
-<h4 class="text-3xl font-bold mb-3 text-gray-800">
-Kim Thanh High School
-</h4>
+<h4 class="text-3xl font-bold mb-3">Kim Thanh High School</h4>
 
 <p class="text-green-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">
 Alumni
 </p>
 
-<p class="text-gray-500 font-medium italic text-lg leading-relaxed">
+<p class="text-gray-500 italic text-lg">
 Where my love for Mathematics and logic began.
 </p>
 
 </div>
 
 </div>
-
 </div>
 </section>
-
-
-
-<section id="skills" class="py-24 px-6">
-
-<div class="max-w-4xl mx-auto">
-
-<h2 class="text-5xl font-serif font-bold text-gray-800 mb-14 text-center">
-My Skills
-</h2>
-
-<div class="glass p-14">
-
-<div class="space-y-10">
-
-<div>
-<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
-Teamwork & Collaboration
-</p>
-<div class="skill-container"><div class="skill-fill" style="width:95%"></div></div>
-</div>
-
-<div>
-<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
-Leadership & Management
-</p>
-<div class="skill-container"><div class="skill-fill" style="width:88%"></div></div>
-</div>
-
-<div>
-<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
-Critical Thinking & Logic
-</p>
-<div class="skill-container"><div class="skill-fill" style="width:92%"></div></div>
-</div>
-
-<div>
-<p class="text-sm font-black text-gray-500 uppercase tracking-widest">
-Microsoft Office
-</p>
-<div class="skill-container"><div class="skill-fill" style="width:85%"></div></div>
-</div>
-
-</div>
-</div>
-</div>
-</section>
-
 
 
 <section id="exp" class="py-24 px-6 max-w-5xl mx-auto">
@@ -255,11 +210,10 @@ Experience
 
 <div class="space-y-12">
 
-
 <div class="glass p-10 flex flex-col md:flex-row items-center gap-12">
 
 <img src="DAN_LINK_ANH_CFAA"
-class="w-40 h-40 object-cover rounded-3xl shadow-lg">
+class="exp-img">
 
 <div>
 
@@ -271,19 +225,17 @@ Vice Head of HR - CFAA
 Future Accountants & Auditors Club (11/2025 – Present)
 </p>
 
-<p class="text-gray-500 font-medium text-lg leading-relaxed">
+<p class="text-gray-500 text-lg">
 Leading internal HR strategies, managing club members, and maintaining professional culture.
 </p>
 
 </div>
 </div>
 
-
-
 <div class="glass p-10 flex flex-col md:flex-row items-center gap-12">
 
 <img src="DAN_LINK_ANH_TUTOR"
-class="w-40 h-40 object-cover rounded-3xl shadow-lg">
+class="exp-img">
 
 <div>
 
@@ -295,18 +247,15 @@ Mathematics Tutor
 Freelance (09/2024 – Present)
 </p>
 
-<p class="text-gray-500 font-medium text-lg leading-relaxed">
+<p class="text-gray-500 text-lg">
 Simplifying complex mathematical concepts and building logical foundation.
 </p>
 
 </div>
 </div>
 
-
 </div>
-
 </section>
-
 
 
 <section id="moments" class="py-24 px-6 bg-pink-50/20">
@@ -317,15 +266,24 @@ Daily Moments ✨
 
 <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
 
-<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_1" class="h-80 w-full rounded-[40px]"></div>
-<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_2" class="h-80 w-full rounded-[40px]"></div>
-<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_3" class="h-80 w-full rounded-[40px]"></div>
-<div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_4" class="h-80 w-full rounded-[40px]"></div>
-
+<div class="moment-card">
+<img src="DAN_LINK_ANH_MOMENT_1" class="h-80 w-full rounded-[40px] mb-4">
 </div>
 
-</section>
+<div class="moment-card">
+<img src="DAN_LINK_ANH_MOMENT_2" class="h-80 w-full rounded-[40px] mb-4">
+</div>
 
+<div class="moment-card">
+<img src="DAN_LINK_ANH_MOMENT_3" class="h-80 w-full rounded-[40px] mb-4">
+</div>
+
+<div class="moment-card">
+<img src="DAN_LINK_ANH_MOMENT_4" class="h-80 w-full rounded-[40px] mb-4">
+</div>
+
+</div>
+</section>
 
 
 <footer id="contact" class="py-32 text-center bg-white rounded-t-[100px] shadow-inner">
@@ -336,15 +294,21 @@ Let's connect.
 
 <div class="flex justify-center gap-16">
 
-<a href="https://www.facebook.com/nhuwquynh.vt/" class="text-accent text-5xl">
+<a href="https://www.facebook.com/nhuwquynh.vt/"
+class="text-accent text-5xl">
 <i class="fa-brands fa-facebook"></i>
 </a>
 
-<a href="mailto:nhuquynhh3110@gmail.com" class="text-accent text-5xl">
+<a href="mailto:nhuquynhh3110@gmail.com"
+class="text-accent text-5xl">
 <i class="fa-solid fa-envelope"></i>
 </a>
 
 </div>
+
+<p class="mt-24 text-[10px] font-black uppercase tracking-[1em] opacity-30">
+© 2026 VU THI NHU QUYNH
+</p>
 
 </footer>
 
