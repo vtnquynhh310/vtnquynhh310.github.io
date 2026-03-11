@@ -49,10 +49,28 @@ overflow:hidden;
 margin-top:8px;
 }
 
+/* SKILLS GRADIENT MULTI COLOR */
+
 .skill-fill{
-background:linear-gradient(90deg,#98ddca 0%,#ff85a2 100%);
+background:linear-gradient(
+270deg,
+#ff85a2,
+#ffb6c1,
+#ffc8dd,
+#cdb4db,
+#98ddca,
+#7bdff2
+);
+background-size:600% 600%;
+animation:gradientMove 6s ease infinite;
 height:100%;
 border-radius:100px;
+}
+
+@keyframes gradientMove{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 }
 
 .floating{
@@ -97,6 +115,7 @@ Quynh.vn
 
 </div>
 </nav>
+
 
 
 <header id="intro" class="min-h-screen flex items-center justify-center px-6 pt-24">
@@ -330,9 +349,14 @@ Daily Moments ✨
 
 <footer id="contact" class="py-32 text-center bg-white rounded-t-[100px] shadow-inner">
 
-<h2 class="text-6xl font-serif font-black italic mb-16 text-gray-800">
+<h2 class="text-6xl font-serif font-black italic mb-10 text-gray-800">
 Let's connect.
 </h2>
+
+<p class="text-gray-500 mb-14 text-lg max-w-xl mx-auto">
+Thank you for visiting my portfolio.  
+I am always open to learning, collaborating and exploring new opportunities.
+</p>
 
 <div class="flex justify-center gap-16">
 
