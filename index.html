@@ -10,29 +10,23 @@
     <style>
         body { font-family: 'Quicksand', sans-serif; background: #fffafb; color: #4a4a4a; scroll-behavior: smooth; }
         .font-serif { font-family: 'Playfair Display', serif; }
-        
-        .text-accent { color: #ff85a2; } /* Hồng pastel nguyên bản */
+        .text-accent { color: #ff85a2; }
         .bg-accent { background-color: #ff85a2; }
-        
         .glass { 
             background: rgba(255, 255, 255, 0.8); 
             backdrop-filter: blur(15px); 
             border: 1px solid rgba(255, 255, 255, 0.5); 
             border-radius: 40px; 
         }
-
-        /* Skill Bar Gradient cũ: Xanh Mint sang Hồng Pastel */
         .skill-container { width: 100%; background: #f0f0f0; border-radius: 100px; height: 10px; overflow: hidden; margin-top: 8px; }
         .skill-fill { 
             background: linear-gradient(90deg, #98ddca 0%, #ff85a2 100%); 
             height: 100%; 
             border-radius: 100px; 
         }
-
         .floating { animation: float 5s ease-in-out infinite; }
         @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
-
-        .moment-card img { border: 10px solid white; box-shadow: 0 15px 35px rgba(255, 133, 162, 0.15); transition: 0.5s; }
+        .moment-card img { border: 10px solid white; box-shadow: 0 15px 35px rgba(255, 133, 162, 0.15); transition: 0.5s; object-fit: cover; }
         .moment-card:hover img { transform: translateY(-10px) rotate(2deg); }
     </style>
 </head>
@@ -40,7 +34,7 @@
 
     <nav class="fixed w-full z-50 px-10 py-6 flex justify-between items-center bg-white/40 backdrop-blur-md border-b border-pink-100">
         <span class="text-3xl font-black text-accent italic tracking-tighter">Quynh.vn</span>
-        <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">
+        <div class="hidden md:flex space-x-10 text-[11px] font-bold uppercase tracking-[0.2em] text-gray-500">
             <a href="#intro" class="hover:text-accent transition">Introduction</a>
             <a href="#quote" class="hover:text-accent transition">Quote</a>
             <a href="#edu" class="hover:text-accent transition">Education</a>
@@ -70,7 +64,9 @@
                 </div>
             </div>
             <div class="order-1 md:order-2 flex justify-center relative">
-                <img src="https://i.ibb.co/vz6mDmx/quynh-avatar.png" class="w-80 h-80 md:w-[480px] md:h-[480px] object-cover rounded-[70px] border-[15px] border-white shadow-2xl floating relative z-10">
+                
+                <img src="DAN_LINK_ANH_CHAN_DUNG_VAO_DAY" class="w-80 h-80 md:w-[480px] md:h-[480px] object-cover rounded-[70px] border-[15px] border-white shadow-2xl floating relative z-10">
+                
                 <div class="absolute -top-10 -left-10 text-9xl text-pink-100 opacity-50">🌸</div>
             </div>
         </div>
@@ -92,11 +88,17 @@
             <h2 class="text-5xl font-serif font-black text-center mb-20 italic text-accent uppercase tracking-widest">Education</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="glass p-12 hover:shadow-2xl transition-all border-l-8 border-accent">
+                    
+                    <img src="DAN_LINK_ANH_FTU_VAO_DAY" class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
+                    
                     <h4 class="text-3xl font-bold mb-3 text-gray-800">Foreign Trade University</h4>
                     <p class="text-pink-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">2024 - Present</p>
                     <p class="text-gray-500 font-medium italic text-lg leading-relaxed">Sophomore | Accounting & Auditing (Standard Program).</p>
                 </div>
                 <div class="glass p-12 hover:shadow-2xl transition-all border-l-8 border-green-200">
+                    
+                    <img src="DAN_LINK_ANH_TRUONG_CAP_3_VAO_DAY" class="w-full h-40 object-cover rounded-3xl mb-6 shadow-sm">
+                    
                     <h4 class="text-3xl font-bold mb-3 text-gray-800">Kim Thanh High School</h4>
                     <p class="text-green-300 font-black text-xs mb-6 uppercase tracking-[0.3em]">Alumni</p>
                     <p class="text-gray-500 font-medium italic text-lg leading-relaxed">Where my love for Mathematics and logic began.</p>
@@ -151,7 +153,6 @@
                 </div>
             </div>
         </div>
-
         <div class="mt-20 text-center glass p-10 italic text-xl text-gray-500">
             <p>Beyond work, I love <span class="text-accent font-bold">Watching Movies</span> and exploring cinema. ❤️</p>
         </div>
@@ -160,10 +161,15 @@
     <section id="moments" class="py-24 px-6 bg-pink-50/20">
         <h2 class="text-5xl font-serif font-black text-center mb-20 italic text-accent uppercase tracking-widest">Daily Moments ✨</h2>
         <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div class="moment-card"><img src="https://i.ibb.co/moments1.png" class="h-80 w-full object-cover rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"collecting memories"</p></div>
-            <div class="moment-card"><img src="https://i.ibb.co/moments2.png" class="h-80 w-full object-cover rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"just good vibes"</p></div>
-            <div class="moment-card"><img src="https://i.ibb.co/moments3.png" class="h-80 w-full object-cover rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"weekend escape"</p></div>
-            <div class="moment-card"><img src="https://i.ibb.co/moments4.png" class="h-80 w-full object-cover rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"laughing life"</p></div>
+            
+            <div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_1" class="h-80 w-full rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"collecting memories"</p></div>
+            
+            <div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_2" class="h-80 w-full rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"just good vibes"</p></div>
+            
+            <div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_3" class="h-80 w-full rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"weekend escape"</p></div>
+            
+            <div class="moment-card"><img src="DAN_LINK_ANH_MOMENT_4" class="h-80 w-full rounded-[40px] mb-4"><p class="text-center italic text-sm opacity-60">"laughing life"</p></div>
+            
         </div>
     </section>
 
